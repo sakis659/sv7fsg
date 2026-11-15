@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="el">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SV7FSG · Ραδιοερασιτεχνικός Σταθμός</title>
-<meta name="description" content="SV7FSG – Ραδιοερασιτεχνικός σταθμός από την Ελλάδα. Σταθμός, μπάντες, QSL και επικοινωνία.">
+<title>SV7FSG · Amateur Radio Station</title>
+<meta name="description" content="SV7FSG – Amateur radio station from Xanthi, Greece (KN21KD). DX news, DXpeditions, station info, bands and QSL.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Cpath d='M32 18v34M20 22h24M23 30h18M26 38h12' stroke='%23ffb547' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='14' r='4' fill='%2338e8c6'/%3E%3C/svg%3E">
 <style>
   :root{
@@ -488,12 +488,11 @@ const $ = s => document.querySelector(s);
 const esc = t => String(t??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const L = v => (v && typeof v === "object" && !Array.isArray(v)) ? (v[LANG] ?? v.el ?? v.en ?? "") : (v ?? "");
 
-// Γλώσσα: πρώτα η επιλογή του επισκέπτη, μετά η γλώσσα του browser
+// Γλώσσα: η επιλογή του επισκέπτη (κουμπί EL/EN ή ?lang=el), αλλιώς αγγλικά
 function detectLang(){
   try { const s = localStorage.getItem("lang"); if (s==="el"||s==="en") return s; } catch(e){}
   const q = new URLSearchParams(location.search).get("lang"); if (q==="el"||q==="en") return q;
-  const langs = navigator.languages || [navigator.language || "en"];
-  return langs.some(l => /^el\b/i.test(l)) ? "el" : "en";
+  return "en";   // προεπιλογή: αγγλικά (τα ελληνικά με το κουμπί EL)
 }
 let LANG = detectLang();
 const T = k => I18N[LANG][k];
