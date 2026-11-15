@@ -365,7 +365,7 @@
 
   <section id="qsl" class="reveal">
     <div class="wrap">
-      <div class="sec-head"><span class="sec-num">06 //</span><h2>QSL</h2><p class="sec-sub" data-i18n="qsl_sub">Θα χαρώ να επιβεβαιώσω το QSO μας.</p></div>
+      <div class="sec-head"><span class="sec-num">06 //</span><h2>QSL</h2><p class="sec-sub" data-i18n="qsl_sub">Επιβεβαιώνω τα QSO μέσω eQSL ή Direct.</p></div>
       <div class="qsl">
         <div class="qsl-card">
           <svg class="bg" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="2"><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="80"/><path d="M100 10v180M10 100h180"/></svg>
@@ -433,7 +433,7 @@ const CONFIG = {
   activeBands: ["160m","80m","60m","40m","30m","20m","17m","15m","12m","10m","6m"],   // μπάντες όπου είσαι QRV
   modes: ["SSB","PSK31","RTTY"],
   // QSL: true = ναι, false = όχι, null = να μην εμφανίζεται
-  qsl: { lotw:null, eqsl:null, bureau:null, direct:null, clublog:null },
+  qsl: { lotw:null, eqsl:true, bureau:null, direct:true, clublog:null },
   qslFooter: "QTH: XANTHI · KN21KD",
   email: "sv7fsg@yahoo.gr",
   qrz: "https://www.qrz.com/db/SV7FSG"
@@ -452,7 +452,7 @@ const I18N = {
     bands_h:"Μπάντες & modes", bands_sub:"Οι μπάντες όπου θα με βρεις (QRV), με τα όρια της IARU Region 1.", legend:"Με πράσινο: μπάντες όπου είμαι συνήθως QRV.",
     morse_h:"Το call μου σε Morse", morse_sub:"Πάτα σε ένα γράμμα για να το ακούσεις ή γράψε δικό σου κείμενο και άκουσέ το σε CW.",
     cw_ph:"Γράψε π.χ. CQ CQ DE SV7FSG", cw_play:"▶ Αναπαραγωγή", speed:"Ταχύτητα:",
-    qsl_sub:"Θα χαρώ να επιβεβαιώσω το QSO μας.", contact_h:"Ας κάνουμε QSO!", contact_p:"Για sked, ερωτήσεις ή QSL, στείλε μου μήνυμα.",
+    qsl_sub:"Επιβεβαιώνω τα QSO μέσω eQSL ή Direct.", contact_h:"Ας κάνουμε QSO!", contact_p:"Για sked, ερωτήσεις ή QSL, στείλε μου μήνυμα.",
     footer:"Ραδιοερασιτεχνικός σταθμός",
     f_call:"Callsign", f_op:"Χειριστής", f_qth:"QTH", f_loc:"Locator", f_zone:"CQ / ITU", f_lic:"Άδεια από",
     q_lotw:"Logbook of The World (ARRL)", q_eqsl:"eqsl.cc", q_bureau:"Μέσω του QSL bureau", q_direct:"Ταχυδρομικά με SAE", q_clublog:"OQRS", q_ask:"Για QSL επικοινώνησε μαζί μου με email",
@@ -472,7 +472,7 @@ const I18N = {
     bands_h:"Bands & modes", bands_sub:"Bands where you'll find me (QRV), with IARU Region 1 limits.", legend:"Green: bands where I'm usually QRV.",
     morse_h:"My call in Morse", morse_sub:"Tap a letter to hear it, or type your own text and listen to it in CW.",
     cw_ph:"Type e.g. CQ CQ DE SV7FSG", cw_play:"▶ Play", speed:"Speed:",
-    qsl_sub:"I'll be happy to confirm our QSO.", contact_h:"Let's make a QSO!", contact_p:"For skeds, questions or QSLs, drop me a message.",
+    qsl_sub:"I confirm QSOs via eQSL or Direct.", contact_h:"Let's make a QSO!", contact_p:"For skeds, questions or QSLs, drop me a message.",
     footer:"Amateur radio station",
     f_call:"Callsign", f_op:"Operator", f_qth:"QTH", f_loc:"Locator", f_zone:"CQ / ITU", f_lic:"Licensed since",
     q_lotw:"Logbook of The World (ARRL)", q_eqsl:"eqsl.cc", q_bureau:"Via the QSL bureau", q_direct:"By mail with SAE", q_clublog:"OQRS", q_ask:"For QSL, contact me by email",
