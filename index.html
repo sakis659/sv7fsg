@@ -365,7 +365,7 @@
 
   <section id="qsl" class="reveal">
     <div class="wrap">
-      <div class="sec-head"><span class="sec-num">06 //</span><h2>QSL</h2><p class="sec-sub" data-i18n="qsl_sub">Επιβεβαιώνω όλα τα QSO. Δες παρακάτω πώς.</p></div>
+      <div class="sec-head"><span class="sec-num">06 //</span><h2>QSL</h2><p class="sec-sub" data-i18n="qsl_sub">Θα χαρώ να επιβεβαιώσω το QSO μας.</p></div>
       <div class="qsl">
         <div class="qsl-card">
           <svg class="bg" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="2"><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="80"/><path d="M100 10v180M10 100h180"/></svg>
@@ -407,36 +407,38 @@
    ================================================================== */
 const CONFIG = {
   call: "SV7FSG",
-  name: { el: "Το όνομά σου", en: "Your name" },
-  qth:  { el: "Πόλη, Ελλάδα", en: "City, Greece" },
-  locator: "KN--",                       // Maidenhead locator, π.χ. "KN21"
-  zones: "20 / 28",                      // CQ zone / ITU zone (Ελλάδα: 20 / 28)
-  licensed: "20XX",                      // έτος άδειας
+  name: { el: "Αθανάσιος Ακασίδης", en: "Athanasios Akasidis" },
+  qth:  { el: "Ξάνθη, Ελλάδα", en: "Xanthi, Greece" },
+  locator: "KN21KD",                     // Maidenhead locator
+  zones: "20 / 28",                      // CQ zone / ITU zone
+  licensed: "2003",                      // έτος άδειας
   intro: {
-    el: "Καλώς ήρθες στη σελίδα του σταθμού μου! Εδώ θα βρεις πληροφορίες για τον εξοπλισμό, τις μπάντες όπου είμαι QRV και πώς να επιβεβαιώσεις το QSO μας.",
-    en: "Welcome to my station's page! Here you'll find info about my equipment, the bands where I'm QRV, and how to confirm our QSO."
+    el: "Καλώς ήρθες στη σελίδα του σταθμού μου στην Ξάνθη! Εδώ θα βρεις πληροφορίες για τον εξοπλισμό μου, τις μπάντες όπου είμαι QRV και τα τελευταία DX νέα.",
+    en: "Welcome to my station's page from Xanthi, Greece! Here you'll find info about my equipment, the bands where I'm QRV and the latest DX news."
   },
   about: {
-    el: `<p>Γεια σου! Είμαι ο <b>Το όνομά σου</b> και εκπέμπω ως <b class="hl">SV7FSG</b> από την Ελλάδα.</p>
-         <p>Η ραδιοερασιτεχνία για μένα είναι πειραματισμός, κατασκευές και φυσικά επαφές με σταθμούς από όλο τον κόσμο. Μου αρέσουν ιδιαίτερα τα ψηφιακά modes και το DX.</p>
+    el: `<p>Γεια σου! Είμαι ο <b>Αθανάσιος Ακασίδης</b> και εκπέμπω ως <b class="hl">SV7FSG</b> από την Ξάνθη, στη Θράκη (locator KN21KD).</p>
+         <p>Είμαι ραδιοερασιτέχνης από το 2003. Δουλεύω κυρίως SSB και ψηφιακά modes (PSK31, RTTY) σε όλες τις μπάντες HF, με έναν Kenwood TS-480SAT και κεραία Inverted V.</p>
          <p>Αν με ακούσεις στον αέρα, φώναξέ με! 73</p>`,
-    en: `<p>Hi! I'm <b>Your name</b>, operating as <b class="hl">SV7FSG</b> from Greece.</p>
-         <p>For me, amateur radio is about experimenting, building, and of course making contacts with stations all over the world. I especially enjoy digital modes and chasing DX.</p>
+    en: `<p>Hi! I'm <b>Athanasios Akasidis</b>, operating as <b class="hl">SV7FSG</b> from Xanthi in Thrace, northern Greece (locator KN21KD).</p>
+         <p>I've been a licensed radio amateur since 2003. I mostly work SSB and digital modes (PSK31, RTTY) on all HF bands, using a Kenwood TS-480SAT and an Inverted V antenna.</p>
          <p>If you hear me on the air, give me a call! 73</p>`
   },
-  rig: "Μάρκα & μοντέλο / Make & model",
-  rigNote: { el: "HF/VHF πομποδέκτης του shack.", en: "The shack's HF/VHF transceiver." },
-  antenna: "Dipole / Vertical",
-  antennaNote: { el: "π.χ. Dipole για τα HF και vertical για 2m/70cm.", en: "e.g. a dipole for HF and a vertical for 2m/70cm." },
+  rig: "Kenwood TS-480SAT",
+  rigNote: { el: "Πομποδέκτης HF + 6m με ενσωματωμένο auto tuner.", en: "HF + 6m transceiver with built-in auto tuner." },
+  antenna: "Inverted V",
+  antennaNote: { el: "Κεραία σύρματος για τις μπάντες HF.", en: "Wire antenna for the HF bands." },
   power: "100 W",
-  powerNote: { el: "Και QRP όταν βγαίνω portable.", en: "And QRP when I'm out portable." },
-  activeBands: ["40m","20m","15m","10m","2m","70cm"],   // μπάντες όπου είσαι QRV
-  modes: ["SSB","CW","FT8","FT4","RTTY","FM"],
-  qsl: { lotw:true, eqsl:true, bureau:true, direct:true, clublog:false },   // true = ναι, false = όχι
-  qslFooter: "QTH: GREECE",
-  email: "you@example.com",
+  powerNote: { el: "Από το shack στην Ξάνθη.", en: "From the shack in Xanthi." },
+  activeBands: ["160m","80m","60m","40m","30m","20m","17m","15m","12m","10m","6m"],   // μπάντες όπου είσαι QRV
+  modes: ["SSB","PSK31","RTTY"],
+  // QSL: true = ναι, false = όχι, null = να μην εμφανίζεται
+  qsl: { lotw:null, eqsl:null, bureau:null, direct:null, clublog:null },
+  qslFooter: "QTH: XANTHI · KN21KD",
+  email: "sv7fsg@yahoo.gr",
   qrz: "https://www.qrz.com/db/SV7FSG"
 };
+
 /* ================================================================== */
 
 const I18N = {
@@ -450,10 +452,10 @@ const I18N = {
     bands_h:"Μπάντες & modes", bands_sub:"Οι μπάντες όπου θα με βρεις (QRV), με τα όρια της IARU Region 1.", legend:"Με πράσινο: μπάντες όπου είμαι συνήθως QRV.",
     morse_h:"Το call μου σε Morse", morse_sub:"Πάτα σε ένα γράμμα για να το ακούσεις ή γράψε δικό σου κείμενο και άκουσέ το σε CW.",
     cw_ph:"Γράψε π.χ. CQ CQ DE SV7FSG", cw_play:"▶ Αναπαραγωγή", speed:"Ταχύτητα:",
-    qsl_sub:"Επιβεβαιώνω όλα τα QSO. Δες παρακάτω πώς.", contact_h:"Ας κάνουμε QSO!", contact_p:"Για sked, ερωτήσεις ή QSL, στείλε μου μήνυμα.",
+    qsl_sub:"Θα χαρώ να επιβεβαιώσω το QSO μας.", contact_h:"Ας κάνουμε QSO!", contact_p:"Για sked, ερωτήσεις ή QSL, στείλε μου μήνυμα.",
     footer:"Ραδιοερασιτεχνικός σταθμός",
     f_call:"Callsign", f_op:"Χειριστής", f_qth:"QTH", f_loc:"Locator", f_zone:"CQ / ITU", f_lic:"Άδεια από",
-    q_lotw:"Logbook of The World (ARRL)", q_eqsl:"eqsl.cc", q_bureau:"Μέσω του QSL bureau", q_direct:"Ταχυδρομικά με SAE", q_clublog:"OQRS",
+    q_lotw:"Logbook of The World (ARRL)", q_eqsl:"eqsl.cc", q_bureau:"Μέσω του QSL bureau", q_direct:"Ταχυδρομικά με SAE", q_clublog:"OQRS", q_ask:"Για QSL επικοινώνησε μαζί μου με email",
     all:"Όλα", src:"Πηγή", live:"● Ενεργό τώρα", done:"Ολοκληρώθηκε", tomorrow:"Αύριο", inDays:n=>`Σε ${n} μέρες`,
     noNews:"Δεν υπάρχουν ενεργές ειδήσεις αυτή τη στιγμή.", newsErr:"Οι ειδήσεις δεν φορτώθηκαν.", loading:"Φόρτωση…",
     months:["Ιαν","Φεβ","Μαρ","Απρ","Μαΐ","Ιουν","Ιουλ","Αυγ","Σεπ","Οκτ","Νοε","Δεκ"],
@@ -470,10 +472,10 @@ const I18N = {
     bands_h:"Bands & modes", bands_sub:"Bands where you'll find me (QRV), with IARU Region 1 limits.", legend:"Green: bands where I'm usually QRV.",
     morse_h:"My call in Morse", morse_sub:"Tap a letter to hear it, or type your own text and listen to it in CW.",
     cw_ph:"Type e.g. CQ CQ DE SV7FSG", cw_play:"▶ Play", speed:"Speed:",
-    qsl_sub:"I confirm all QSOs. Here's how.", contact_h:"Let's make a QSO!", contact_p:"For skeds, questions or QSLs, drop me a message.",
+    qsl_sub:"I'll be happy to confirm our QSO.", contact_h:"Let's make a QSO!", contact_p:"For skeds, questions or QSLs, drop me a message.",
     footer:"Amateur radio station",
     f_call:"Callsign", f_op:"Operator", f_qth:"QTH", f_loc:"Locator", f_zone:"CQ / ITU", f_lic:"Licensed since",
-    q_lotw:"Logbook of The World (ARRL)", q_eqsl:"eqsl.cc", q_bureau:"Via the QSL bureau", q_direct:"By mail with SAE", q_clublog:"OQRS",
+    q_lotw:"Logbook of The World (ARRL)", q_eqsl:"eqsl.cc", q_bureau:"Via the QSL bureau", q_direct:"By mail with SAE", q_clublog:"OQRS", q_ask:"For QSL, contact me by email",
     all:"All", src:"Source", live:"● Active now", done:"Completed", tomorrow:"Tomorrow", inDays:n=>`In ${n} days`,
     noNews:"No active news right now.", newsErr:"Could not load the news.", loading:"Loading…",
     months:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
@@ -517,7 +519,8 @@ function renderText(){
   const facts = [["f_call",CONFIG.call],["f_op",L(CONFIG.name)],["f_qth",L(CONFIG.qth)],["f_loc",CONFIG.locator],["f_zone",CONFIG.zones],["f_lic",CONFIG.licensed]];
   $("#facts").innerHTML = facts.map(([k,v])=>`<li><span>${T(k)}</span><b>${esc(v)}</b></li>`).join("");
   const QSL = [["lotw","LoTW"],["eqsl","eQSL"],["bureau","Bureau"],["direct","Direct"],["clublog","Club Log"]];
-  $("#qslList").innerHTML = QSL.map(([k,t])=>`<li><span class="st ${CONFIG.qsl[k]?"yes":"no"}">${CONFIG.qsl[k]?"✓":"✕"}</span><div><b>${t}</b><small>${T("q_"+k)}</small></div></li>`).join("");
+  const qShown = QSL.filter(([k])=>CONFIG.qsl[k]!==null && CONFIG.qsl[k]!==undefined);
+  $("#qslList").innerHTML = qShown.length ? qShown.map(([k,t])=>`<li><span class="st ${CONFIG.qsl[k]?"yes":"no"}">${CONFIG.qsl[k]?"✓":"✕"}</span><div><b>${t}</b><small>${T("q_"+k)}</small></div></li>`).join("") : `<li><span class="st yes">✉</span><div><b>${T("q_ask")}</b><small>${esc(CONFIG.email)}</small></div></li>`;
   $("#contactBtns").innerHTML = `
     <a class="btn btn-primary" href="mailto:${esc(CONFIG.email)}">✉ ${esc(CONFIG.email)}</a>
     <a class="btn btn-ghost" href="${esc(CONFIG.qrz)}" target="_blank" rel="noopener">QRZ.com →</a>`;
