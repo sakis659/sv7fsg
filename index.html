@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SV7FSG · Ραδιοερασιτεχνικός Σταθμός</title>
+<meta name="description" content="SV7FSG – Ραδιοερασιτεχνικός σταθμός από την Ελλάδα. Σταθμός, μπάντες, QSL και επικοινωνία.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b1220'/%3E%3Cpath d='M32 18v34M20 22h24M23 30h18M26 38h12' stroke='%23ffb547' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='14' r='4' fill='%2338e8c6'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#070b14; --bg2:#0c1322; --panel:#101a2d; --line:#1d2a44;
+    --text:#e6edf7; --muted:#8b9ab3;
+    --amber:#ffb547; --green:#38e8c6; --red:#ff5d6c;
+    --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;
+    background-image:radial-gradient(ellipse at 80% -10%, #12305a55 0%, transparent 55%),
+                     radial-gradient(ellipse at -10% 40%, #0e3b3a40 0%, transparent 50%);}
+  a{color:var(--green);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:#070b14d9;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-weight:700;font-size:1.15rem;color:var(--text);letter-spacing:.08em}
+  .logo:hover{text-decoration:none}
+  .logo .dot{width:9px;height:9px;border-radius:50%;background:var(--red);box-shadow:0 0 10px var(--red);animation:blink 2.2s infinite}
+  @keyframes blink{0%,60%{opacity:1}70%,90%{opacity:.25}100%{opacity:1}}
+  .navlinks{display:flex;gap:22px;font-size:.92rem}
+  .navlinks a{color:var(--muted)}
+  .navlinks a:hover{color:var(--text);text-decoration:none}
+  @media (max-width:760px){.navlinks{display:none}}
+
+  /* HERO */
+  .hero{padding:70px 0 30px}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.hero-art{max-width:380px;margin:0 auto}}
+  .tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);border:1px solid #ffb54755;padding:6px 12px;border-radius:999px;background:#ffb5470d}
+  .call{font-family:var(--mono);font-weight:800;font-size:clamp(3.4rem,11vw,7.2rem);line-height:1;letter-spacing:.04em;margin:22px 0 8px;
+    color:var(--text);text-shadow:0 0 28px #38e8c655, 0 0 2px #38e8c6}
+  .call span{color:var(--amber);text-shadow:0 0 28px #ffb54766}
+  .phon{font-family:var(--mono);color:var(--muted);font-size:.95rem;letter-spacing:.06em}
+  .lead{margin:22px 0 28px;font-size:1.08rem;color:#c3cde0;max-width:560px}
+  .vfo{display:inline-flex;align-items:baseline;gap:14px;background:#050a12;border:1px solid var(--line);border-radius:10px;padding:12px 18px;margin-bottom:28px;box-shadow:inset 0 0 30px #38e8c610}
+  .vfo .lbl{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.12em}
+  .vfo .freq{font-family:var(--mono);font-size:1.9rem;color:var(--green);text-shadow:0 0 12px #38e8c699;letter-spacing:.05em}
+  .vfo .mode{font-family:var(--mono);font-size:.8rem;color:var(--bg);background:var(--amber);padding:2px 8px;border-radius:4px;font-weight:700}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:.95rem;cursor:pointer;border:1px solid transparent;transition:.2s;font-family:var(--sans)}
+  .btn-primary{background:var(--amber);color:#1a1205}
+  .btn-primary:hover{background:#ffc66e;text-decoration:none;transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:var(--text);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--green);color:var(--green);text-decoration:none}
+
+  .hero .wrap.wf{display:block}
+  .hero-art svg{width:100%;height:auto;display:block}
+  .wave{animation:wave 2.6s ease-out infinite;transform-origin:center;opacity:0}
+  .wave.w2{animation-delay:.85s}.wave.w3{animation-delay:1.7s}
+  @keyframes wave{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(1.25)}}
+
+  /* WATERFALL */
+  .wf{margin-top:40px}
+  .wf-box{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#02050b;position:relative}
+  .wf-head{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;font-family:var(--mono);font-size:.75rem;color:var(--muted);border-bottom:1px solid var(--line);background:#060b15;letter-spacing:.08em}
+  .wf-head b{color:var(--green);font-weight:600}
+  canvas#wf{display:block;width:100%;height:150px}
+  .wf-scale{display:flex;justify-content:space-between;padding:4px 16px 8px;font-family:var(--mono);font-size:.68rem;color:#5d6b85;background:#02050b}
+
+  /* INFO BAR */
+  .bar{margin:40px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  @media (max-width:760px){.bar{grid-template-columns:repeat(2,1fr)}}
+  .bar div{background:var(--bg2);padding:18px 20px}
+  .bar small{display:block;font-family:var(--mono);font-size:.7rem;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+  .bar strong{font-family:var(--mono);font-size:1.35rem;color:var(--text);font-weight:600}
+
+  /* SECTIONS */
+  section{padding:80px 0 10px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:30px;flex-wrap:wrap}
+  .sec-num{font-family:var(--mono);color:var(--amber);font-size:.85rem;letter-spacing:.1em}
+  h2{font-size:clamp(1.7rem,3.5vw,2.3rem);letter-spacing:-.01em}
+  .sec-sub{color:var(--muted);width:100%;max-width:640px}
+
+  .about{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+  @media (max-width:860px){.about{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .about p{color:#c3cde0;margin-bottom:14px}
+  .facts{list-style:none}
+  .facts li{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.95rem}
+  .facts li:last-child{border-bottom:0}
+  .facts span{color:var(--muted)}
+  .facts b{font-family:var(--mono);font-weight:600;text-align:right}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:860px){.grid3{grid-template-columns:1fr}}
+  .eq .ico{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:#38e8c614;border:1px solid #38e8c633;margin-bottom:16px}
+  .eq h3{font-size:1.05rem;margin-bottom:4px}
+  .eq .lbl{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+  .eq p{color:#c3cde0;margin-top:8px;font-size:.95rem}
+
+  .bands{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .band{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--bg2);transition:.2s;position:relative}
+  .band .m{font-family:var(--mono);font-size:1.35rem;font-weight:700}
+  .band .f{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+  .band.on{border-color:#38e8c666;background:linear-gradient(180deg,#38e8c612,transparent)}
+  .band.on .m{color:var(--green)}
+  .band.on::after{content:"QRV";position:absolute;top:12px;right:12px;font-family:var(--mono);font-size:.62rem;color:var(--bg);background:var(--green);padding:1px 6px;border-radius:4px;font-weight:700}
+  .band.off{opacity:.5}
+  .legend{margin-top:14px;font-size:.85rem;color:var(--muted)}
+  .modes{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .mode-chip{font-family:var(--mono);font-size:.88rem;padding:8px 16px;border-radius:999px;border:1px solid #ffb54755;color:var(--amber);background:#ffb5470d}
+
+  /* MORSE */
+  .morse-call{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+  .mc{background:#050a12;border:1px solid var(--line);border-radius:12px;padding:14px 16px;min-width:88px;text-align:center;transition:.15s}
+  .mc .l{font-family:var(--mono);font-size:1.8rem;font-weight:700}
+  .mc .c{display:flex;gap:5px;justify-content:center;align-items:center;height:16px;margin-top:6px}
+  .mc .c i{display:block;height:7px;border-radius:4px;background:var(--amber)}
+  .mc .c i.d{width:7px}.mc .c i.D{width:22px}
+  .mc.lit{border-color:var(--amber);box-shadow:0 0 22px #ffb54755;transform:translateY(-2px)}
+  .mc.lit .l{color:var(--amber)}
+  .cw-tool{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+  .cw-tool input{flex:1;min-width:220px;background:#050a12;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:12px 16px;font-family:var(--mono);font-size:1rem;text-transform:uppercase}
+  .cw-tool input:focus{outline:none;border-color:var(--green)}
+  .cw-out{font-family:var(--mono);color:var(--amber);margin-top:14px;min-height:1.6em;word-break:break-word;letter-spacing:.12em}
+  .wpm{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.85rem;color:var(--muted);margin-top:14px}
+  .wpm input{accent-color:var(--amber)}
+
+  /* QSL */
+  .qsl{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+  @media (max-width:860px){.qsl{grid-template-columns:1fr}}
+  .qsl-card{aspect-ratio:14/9;border-radius:14px;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#0f2747 0%,#0a1a30 55%,#1d1405 100%);border:1px solid #2a3c5c;box-shadow:0 30px 60px -20px #000c;transform:rotate(-2.5deg);padding:22px 24px;display:flex;flex-direction:column;justify-content:space-between}
+  .qsl-card .big{font-family:var(--mono);font-size:clamp(2.2rem,6vw,3.4rem);font-weight:800;color:#fff;letter-spacing:.04em;text-shadow:0 0 18px #38e8c666}
+  .qsl-card .big span{color:var(--amber)}
+  .qsl-card .row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;color:#a9b8d3;letter-spacing:.1em}
+  .qsl-card table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.68rem;color:#cfd9ea}
+  .qsl-card th,.qsl-card td{border:1px solid #ffffff2a;padding:4px 6px;text-align:center}
+  .qsl-card th{color:var(--amber);font-weight:600}
+  .qsl-card svg.bg{position:absolute;right:-30px;top:-20px;width:60%;opacity:.15}
+  .qsl-list{list-style:none;display:grid;gap:10px}
+  .qsl-list li{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;background:var(--bg2)}
+  .qsl-list .st{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.85rem;flex-shrink:0}
+  .qsl-list .yes{background:#38e8c622;color:var(--green)}
+  .qsl-list .no{background:#ff5d6c1f;color:var(--red)}
+  .qsl-list b{display:block}
+  .qsl-list small{color:var(--muted)}
+
+  /* CONTACT */
+  .contact{text-align:center;padding:50px 30px;background:radial-gradient(ellipse at 50% 0%,#38e8c618,transparent 70%),var(--panel)}
+  .contact h2{margin-bottom:10px}
+  .contact p{color:var(--muted);margin-bottom:26px}
+  .contact .btns{justify-content:center}
+
+
+  /* NEWS */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+  .filters button{font-family:var(--mono);font-size:.8rem;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+  .filters button.act{border-color:var(--green);color:var(--green);background:#38e8c612}
+  .news{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:18px}
+  .ncard{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:10px;transition:.2s}
+  .ncard:hover{border-color:#38e8c655;transform:translateY(-2px)}
+  .ntop{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+  .ntype{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:5px;background:#ffb5471a;color:var(--amber);border:1px solid #ffb54740}
+  .nstat{font-family:var(--mono);font-size:.7rem;padding:3px 9px;border-radius:5px}
+  .nstat.live{background:var(--green);color:#04211b;font-weight:700}
+  .nstat.soon{background:#38e8c61a;color:var(--green);border:1px solid #38e8c640}
+  .nstat.done{background:#ffffff0d;color:var(--muted)}
+  .ncall{font-family:var(--mono);font-size:1.7rem;font-weight:800;letter-spacing:.03em;line-height:1.1}
+  .nent{color:var(--muted);font-size:.92rem;margin-top:-4px}
+  .ndates{font-family:var(--mono);font-size:.82rem;color:#c3cde0}
+  .nsum{color:#c3cde0;font-size:.95rem}
+  .nmeta{display:flex;flex-wrap:wrap;gap:6px}
+  .nmeta span{font-family:var(--mono);font-size:.72rem;padding:3px 8px;border-radius:5px;border:1px solid var(--line);color:var(--muted)}
+  .nsrc{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:.82rem;color:var(--muted)}
+  .archive{margin-top:26px}
+  .archive summary{cursor:pointer;color:var(--muted);font-family:var(--mono);font-size:.85rem;margin-bottom:16px}
+  .nempty{color:var(--muted);padding:20px 0}
+
+  footer{margin-top:80px;border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.88rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer .s73{font-family:var(--mono);color:var(--amber);letter-spacing:.1em}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.wave,.logo .dot{animation:none}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     ✏️  ΕΔΩ ΑΛΛΑΖΕΙΣ ΤΑ ΣΤΟΙΧΕΙΑ ΣΟΥ (βλ. CONFIG στο τέλος του αρχείου)
+     ============================================================ -->
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="dot"></span>SV7FSG</a>
+    <div class="navlinks">
+      <a href="#news">DX Νέα</a>
+      <a href="#about">Ο σταθμός</a>
+      <a href="#gear">Εξοπλισμός</a>
+      <a href="#bands">Μπάντες</a>
+      <a href="#morse">Morse</a>
+      <a href="#qsl">QSL</a>
+      <a href="#contact">Επικοινωνία</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tag">● Ραδιοερασιτεχνικός σταθμός · Ελλάδα</span>
+      <h1 class="call">SV<span>7</span>FSG</h1>
+      <div class="phon">SIERRA · VICTOR · SEVEN · FOXTROT · SIERRA · GOLF</div>
+      <p class="lead" data-cfg="intro"></p>
+      <div class="vfo">
+        <span class="lbl">VFO-A</span>
+        <span class="freq" id="vfo">14.074.000</span>
+        <span class="mode" id="vfomode">FT8</span>
+      </div>
+      <div class="btns">
+        <button class="btn btn-primary" id="playCall">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Άκου το call μου σε CW
+        </button>
+        <a class="btn btn-ghost" href="#qsl">QSL info →</a>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 420" fill="none">
+        <defs>
+          <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#38e8c6"/><stop offset="1" stop-color="#38e8c6" stop-opacity="0"/></linearGradient>
+        </defs>
+        <!-- radio waves -->
+        <g transform="translate(200 92)">
+          <circle class="wave" r="120" stroke="#38e8c6" stroke-width="2"/>
+          <circle class="wave w2" r="120" stroke="#38e8c6" stroke-width="2"/>
+          <circle class="wave w3" r="120" stroke="#ffb547" stroke-width="2"/>
+        </g>
+        <!-- yagi -->
+        <g stroke="#e6edf7" stroke-linecap="round">
+          <line x1="110" y1="92" x2="290" y2="92" stroke-width="5"/>
+          <line x1="125" y1="58" x2="125" y2="126" stroke-width="4"/>
+          <line x1="165" y1="62" x2="165" y2="122" stroke-width="4"/>
+          <line x1="205" y1="66" x2="205" y2="118" stroke-width="4"/>
+          <line x1="245" y1="70" x2="245" y2="114" stroke-width="4"/>
+          <line x1="280" y1="73" x2="280" y2="111" stroke-width="4"/>
+        </g>
+        <circle cx="200" cy="92" r="7" fill="#ffb547"/>
+        <!-- tower -->
+        <g stroke="#7f8fab" stroke-width="3" stroke-linecap="round">
+          <line x1="200" y1="98" x2="160" y2="400"/>
+          <line x1="200" y1="98" x2="240" y2="400"/>
+          <line x1="193" y1="150" x2="207" y2="150"/>
+          <line x1="186" y1="205" x2="214" y2="205"/>
+          <line x1="179" y1="260" x2="221" y2="260"/>
+          <line x1="172" y1="315" x2="228" y2="315"/>
+          <line x1="165" y1="370" x2="235" y2="370"/>
+          <path d="M193 150 L214 205 M207 150 L186 205 M186 205 L221 260 M214 205 L179 260 M179 260 L228 315 M221 260 L172 315 M172 315 L235 370 M228 315 L165 370" stroke-width="1.6" opacity=".7"/>
+        </g>
+        <!-- coax -->
+        <path d="M200 100 C 230 160, 250 250, 300 300 S 360 380, 380 400" stroke="url(#g1)" stroke-width="2.5" stroke-dasharray="4 6"/>
+        <!-- ground -->
+        <line x1="40" y1="400" x2="360" y2="400" stroke="#1d2a44" stroke-width="2"/>
+        <!-- red beacon -->
+        <circle cx="200" cy="40" r="4" fill="#ff5d6c"><animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+        <line x1="200" y1="44" x2="200" y2="86" stroke="#e6edf7" stroke-width="3"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="wrap wf">
+    <div class="wf-box">
+      <div class="wf-head"><span>WATERFALL · <b>20m FT8</b></span><span id="wfclock">--:--:-- UTC</span></div>
+      <canvas id="wf"></canvas>
+      <div class="wf-scale"><span>14.0740</span><span>+500 Hz</span><span>+1000 Hz</span><span>+1500 Hz</span><span>+2000 Hz</span><span>+2500 Hz</span><span>+3000</span></div>
+    </div>
+
+    <div class="bar">
+      <div><small>UTC</small><strong id="utc">--:--</strong></div>
+      <div><small>Τοπική ώρα</small><strong id="local">--:--</strong></div>
+      <div><small>Locator</small><strong data-cfg="locator"></strong></div>
+      <div><small>CQ / ITU Zone</small><strong data-cfg="zones"></strong></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="news" class="reveal">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">01 //</span><h2>DX Νέα</h2><p class="sec-sub">DXpeditions, special calls, contests και ό,τι αξίζει να μπει στο log. Κάθε είδηση συνοδεύεται από την πηγή της.</p></div>
+      <div class="filters" id="nfilters"></div>
+      <div class="news" id="newsGrid"><p class="nempty">Φόρτωση…</p></div>
+      <details class="archive" id="archiveBox" hidden><summary>Αρχείο ολοκληρωμένων (<span id="archN">0</span>)</summary><div class="news" id="archiveGrid"></div></details>
+    </div>
+  </section>
+
+  <section id="about" class="reveal">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">02 //</span><h2>Ο σταθμός</h2></div>
+      <div class="about">
+        <div class="card" data-cfg-html="about"></div>
+        <div class="card">
+          <ul class="facts" id="facts"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gear" class="reveal">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">03 //</span><h2>Εξοπλισμός</h2><p class="sec-sub">Τι χρησιμοποιώ στο shack.</p></div>
+      <div class="grid3">
+        <div class="card eq">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38e8c6" stroke-width="1.8"><rect x="2" y="7" width="20" height="12" rx="2"/><circle cx="16" cy="13" r="3"/><path d="M5 11h6M5 15h6M7 7l4-4"/></svg></div>
+          <div class="lbl">Πομποδέκτης</div><h3 data-cfg="rig"></h3><p data-cfg="rigNote"></p>
+        </div>
+        <div class="card eq">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38e8c6" stroke-width="1.8" stroke-linecap="round"><path d="M12 8v14M4 6h16M6 3v6M10 3.5v5M14 3.5v5M18 3v6"/></svg></div>
+          <div class="lbl">Κεραίες</div><h3 data-cfg="antenna"></h3><p data-cfg="antennaNote"></p>
+        </div>
+        <div class="card eq">
+          <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38e8c6" stroke-width="1.8" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+          <div class="lbl">Ισχύς</div><h3 data-cfg="power"></h3><p data-cfg="powerNote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bands" class="reveal">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">04 //</span><h2>Μπάντες & modes</h2><p class="sec-sub">Οι μπάντες όπου θα με βρεις (QRV), με τα όρια της IARU Region 1.</p></div>
+      <div class="bands" id="bandGrid"></div>
+      <p class="legend">Με πράσινο: μπάντες όπου είμαι συνήθως QRV.</p>
+      <div class="modes" id="modes"></div>
+    </div>
+  </section>
+
+  <section id="morse" class="reveal">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">05 //</span><h2>Το call μου σε Morse</h2><p class="sec-sub">Πάτα σε ένα γράμμα για να το ακούσεις ή γράψε δικό σου κείμενο και άκουσέ το σε CW.</p></div>
+      <div class="card">
+        <div class="morse-call" id="morseCall"></div>
+        <div class="cw-tool">
+          <input id="cwText" maxlength="60" placeholder="Γράψε π.χ. CQ CQ DE SV7FSG" value="CQ CQ DE SV7FSG K">
+          <button class="btn btn-primary" id="cwPlay">▶ Αναπαραγωγή</button>
+          <button class="btn btn-ghost" id="cwStop">■ Stop</button>
+        </div>
+        <div class="wpm">Ταχύτητα: <input type="range" id="wpm" min="8" max="30" value="18"> <span id="wpmv">18</span> WPM</div>
+        <div class="cw-out" id="cwOut"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="qsl" class="reveal">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">06 //</span><h2>QSL</h2><p class="sec-sub">Επιβεβαιώνω όλα τα QSO. Δες παρακάτω πώς.</p></div>
+      <div class="qsl">
+        <div class="qsl-card">
+          <svg class="bg" viewBox="0 0 200 200" fill="none" stroke="#fff" stroke-width="2"><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="55"/><circle cx="100" cy="100" r="80"/><path d="M100 10v180M10 100h180"/></svg>
+          <div class="row"><span>RADIO AMATEUR STATION</span><span>GREECE · SV</span></div>
+          <div class="big">SV<span>7</span>FSG</div>
+          <table>
+            <tr><th>TO RADIO</th><th>DATE</th><th>UTC</th><th>MHz</th><th>MODE</th><th>RST</th></tr>
+            <tr><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td></tr>
+          </table>
+          <div class="row"><span data-cfg="qslFooter"></span><span>TNX QSO · 73!</span></div>
+        </div>
+        <ul class="qsl-list" id="qslList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <div class="wrap">
+      <div class="card contact">
+        <h2>Ας κάνουμε QSO!</h2>
+        <p>Για sked, ερωτήσεις ή QSL, στείλε μου μήνυμα.</p>
+        <div class="btns" id="contactBtns"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> SV7FSG · Ραδιοερασιτεχνικός σταθμός</span>
+    <span class="s73">73 DE SV7FSG ·-·-·</span>
+  </div>
+</footer>
+
+<script>
+/* ==================================================================
+   ✏️  CONFIG — Άλλαξε μόνο αυτά. Όλη η σελίδα παίρνει τα στοιχεία από εδώ.
+   ================================================================== */
+const CONFIG = {
+  call: "SV7FSG",
+  name: "Το όνομά σου",                 // π.χ. "Γιώργος"
+  qth: "Πόλη, Ελλάδα",                   // π.χ. "Ξάνθη, Ελλάδα"
+  locator: "KN--",                       // Maidenhead locator, π.χ. "KN21"
+  zones: "20 / 28",                      // CQ zone / ITU zone (Ελλάδα: 20 / 28)
+  licensed: "20XX",                      // έτος άδειας
+  intro: "Καλώς ήρθες στη σελίδα του σταθμού μου! Εδώ θα βρεις πληροφορίες για τον εξοπλισμό, τις μπάντες όπου είμαι QRV και πώς να επιβεβαιώσεις το QSO μας.",
+  about: `
+    <p>Γεια σου! Είμαι ο <b>Το όνομά σου</b> και εκπέμπω ως <b style="color:var(--amber);font-family:var(--mono)">SV7FSG</b> από την Ελλάδα.</p>
+    <p>Η ραδιοερασιτεχνία για μένα είναι πειραματισμός, κατασκευές και φυσικά επαφές με σταθμούς από όλο τον κόσμο. Μου αρέσουν ιδιαίτερα τα ψηφιακά modes και το DX.</p>
+    <p>Αν με ακούσεις στον αέρα, φώναξέ με! 73</p>`,
+  rig: "Μάρκα & μοντέλο",
+  rigNote: "HF/VHF πομποδέκτης του shack.",
+  antenna: "Τύπος κεραίας",
+  antennaNote: "π.χ. Dipole για τα HF και vertical για 2m/70cm.",
+  power: "100 W",
+  powerNote: "Και QRP όταν βγαίνω portable.",
+  // Μπάντες όπου είσαι QRV (θα φαίνονται με πράσινο)
+  activeBands: ["40m","20m","15m","10m","2m","70cm"],
+  modes: ["SSB","CW","FT8","FT4","RTTY","FM"],
+  // QSL: true = ναι, false = όχι
+  qsl: { lotw:true, eqsl:true, bureau:true, direct:true, clublog:false },
+  qslFooter: "QTH: GREECE",
+  email: "you@example.com",
+  qrz: "https://www.qrz.com/db/SV7FSG"
+};
+/* ================================================================== */
+
+const $ = s => document.querySelector(s);
+document.querySelectorAll("[data-cfg]").forEach(el => el.textContent = CONFIG[el.dataset.cfg]);
+document.querySelectorAll("[data-cfg-html]").forEach(el => el.innerHTML = CONFIG[el.dataset.cfgHtml]);
+$("#yr").textContent = new Date().getFullYear();
+
+// Facts
+const facts = [["Callsign",CONFIG.call],["Χειριστής",CONFIG.name],["QTH",CONFIG.qth],["Locator",CONFIG.locator],["CQ / ITU",CONFIG.zones],["Άδεια από",CONFIG.licensed]];
+$("#facts").innerHTML = facts.map(([k,v])=>`<li><span>${k}</span><b>${v}</b></li>`).join("");
+
+// Bands (IARU Region 1)
+const BANDS = [["160m","1.810–2.000"],["80m","3.500–3.800"],["60m","5.351–5.366"],["40m","7.000–7.200"],["30m","10.100–10.150"],["20m","14.000–14.350"],["17m","18.068–18.168"],["15m","21.000–21.450"],["12m","24.890–24.990"],["10m","28.000–29.700"],["6m","50.000–52.000"],["2m","144–146"],["70cm","430–440"]];
+$("#bandGrid").innerHTML = BANDS.map(([m,f])=>`<div class="band ${CONFIG.activeBands.includes(m)?"on":"off"}"><div class="m">${m}</div><div class="f">${f} MHz</div></div>`).join("");
+$("#modes").innerHTML = CONFIG.modes.map(m=>`<span class="mode-chip">${m}</span>`).join("");
+
+// QSL list
+const QSL = [["lotw","LoTW","Logbook of The World (ARRL)"],["eqsl","eQSL","eqsl.cc"],["bureau","Bureau","Μέσω του QSL bureau"],["direct","Direct","Ταχυδρομικά με SAE"],["clublog","Club Log","OQRS"]];
+$("#qslList").innerHTML = QSL.map(([k,t,d])=>`<li><span class="st ${CONFIG.qsl[k]?"yes":"no"}">${CONFIG.qsl[k]?"✓":"✕"}</span><div><b>${t}</b><small>${d}</small></div></li>`).join("");
+
+// Contact
+$("#contactBtns").innerHTML = `
+  <a class="btn btn-primary" href="mailto:${CONFIG.email}">✉ ${CONFIG.email}</a>
+  <a class="btn btn-ghost" href="${CONFIG.qrz}" target="_blank" rel="noopener">QRZ.com →</a>`;
+
+// Clocks
+function pad(n){return String(n).padStart(2,"0")}
+function tick(){
+  const d = new Date();
+  const u = `${pad(d.getUTCHours())}:${pad(d.getUTCMinutes())}`;
+  $("#utc").textContent = u + "Z";
+  $("#wfclock").textContent = `${u}:${pad(d.getUTCSeconds())} UTC`;
+  $("#local").textContent = d.toLocaleTimeString("el-GR",{hour:"2-digit",minute:"2-digit",hour12:false,timeZone:"Europe/Athens"});
+}
+tick(); setInterval(tick,1000);
+
+// VFO cycling
+const VFO = [["14.074.000","FT8"],["7.074.000","FT8"],["14.200.000","USB"],["7.030.000","CW"],["145.500.000","FM"],["21.074.000","FT8"]];
+let vi=0; setInterval(()=>{vi=(vi+1)%VFO.length;$("#vfo").textContent=VFO[vi][0];$("#vfomode").textContent=VFO[vi][1];},3500);
+
+/* ---------- Waterfall (προσομοίωση) ---------- */
+(function(){
+  const c = $("#wf"), ctx = c.getContext("2d");
+  let W,H;
+  function size(){ W = c.width = Math.min(c.clientWidth, 1200); H = c.height = 150; ctx.fillStyle="#02050b"; ctx.fillRect(0,0,W,H); }
+  size(); addEventListener("resize", size);
+  // color map
+  function col(v){ v=Math.max(0,Math.min(1,v));
+    const stops=[[0,[2,5,11]],[.35,[10,40,110]],[.6,[20,170,200]],[.8,[255,210,80]],[1,[255,90,60]]];
+    for(let i=1;i<stops.length;i++){ if(v<=stops[i][0]){ const [a,ca]=stops[i-1],[b,cb]=stops[i],t=(v-a)/(b-a);
+      return ca.map((x,j)=>Math.round(x+(cb[j]-x)*t)); } } return stops[4][1]; }
+  let sigs=[];
+  function newCycle(){ const n=6+Math.floor(Math.random()*10); sigs=[];
+    for(let i=0;i<n;i++) sigs.push({x:Math.random()*0.94+0.03, s:0.45+Math.random()*0.5, w:0.006+Math.random()*0.004, life:110+Math.random()*30}); }
+  newCycle(); let rows=0;
+  const row = ctx.createImageData(1200,1);
+  function step(){
+    ctx.drawImage(c,0,0,W,H-1,0,1,W,H-1);
+    for(let x=0;x<W;x++){
+      const fx=x/W; let v=Math.random()*0.22 + 0.05*Math.sin(fx*9+rows*0.01);
+      for(const s of sigs){ if(s.life>0){ const d=Math.abs(fx-s.x); if(d<s.w) v+=s.s*(1-d/s.w)*(0.85+Math.random()*0.3); } }
+      const [r,g,b]=col(v); const i=x*4; row.data[i]=r;row.data[i+1]=g;row.data[i+2]=b;row.data[i+3]=255;
+    }
+    ctx.putImageData(row,0,0,0,0,W,1);
+    sigs.forEach(s=>s.life--); rows++;
+    if(rows%150===0) newCycle();
+  }
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce){ for(let i=0;i<150;i++) step(); } else { (function loop(){ step(); setTimeout(()=>requestAnimationFrame(loop),45); })(); }
+})();
+
+/* ---------- Morse / CW ---------- */
+const MORSE = {A:".-",B:"-...",C:"-.-.",D:"-..",E:".",F:"..-.",G:"--.",H:"....",I:"..",J:".---",K:"-.-",L:".-..",M:"--",N:"-.",O:"---",P:".--.",Q:"--.-",R:".-.",S:"...",T:"-",U:"..-",V:"...-",W:".--",X:"-..-",Y:"-.--",Z:"--..",
+  "0":"-----","1":".----","2":"..---","3":"...--","4":"....-","5":".....","6":"-....","7":"--...","8":"---..","9":"----.",
+  "/":"-..-.","?":"..--..",".":".-.-.-",",":"--..--","=":"-...-"};
+const callEl = $("#morseCall");
+callEl.innerHTML = CONFIG.call.split("").map((ch,i)=>`<div class="mc" data-i="${i}" role="button" tabindex="0" aria-label="${ch}"><div class="l">${ch}</div><div class="c">${MORSE[ch].split("").map(s=>`<i class="${s==="."?"d":"D"}"></i>`).join("")}</div></div>`).join("");
+
+let actx=null, playing=[], timers=[];
+function audio(){ if(!actx) actx = new (window.AudioContext||window.webkitAudioContext)(); return actx; }
+function stopAll(){ playing.forEach(o=>{try{o.stop()}catch(e){}}); playing=[]; timers.forEach(clearTimeout); timers=[]; document.querySelectorAll(".mc.lit").forEach(e=>e.classList.remove("lit")); }
+function playText(text, onChar){
+  stopAll(); const a=audio(); if(a.state==="suspended") a.resume();
+  const wpm=+$("#wpm").value, dot=1.2/wpm, f=650;
+  const osc=a.createOscillator(), g=a.createGain(); osc.frequency.value=f; osc.type="sine";
+  g.gain.value=0; osc.connect(g).connect(a.destination);
+  let t=a.currentTime+0.08; const t0=t;
+  [...text.toUpperCase()].forEach((ch,idx)=>{
+    if(ch===" "){ t+=dot*4; return; }
+    const code=MORSE[ch]; if(!code) return;
+    const start=t;
+    for(const s of code){ const d=s==="."?dot:dot*3;
+      g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(0.25,t+0.005);
+      g.gain.setValueAtTime(0.25,t+d-0.005); g.gain.linearRampToValueAtTime(0,t+d); t+=d+dot; }
+    if(onChar){ timers.push(setTimeout(()=>onChar(idx,true),(start-t0+0.08)*1000)); timers.push(setTimeout(()=>onChar(idx,false),(t-t0+0.08)*1000)); }
+    t+=dot*2;
+  });
+  osc.start(); osc.stop(t+0.1); playing.push(osc);
+}
+$("#playCall").onclick = ()=>{ playText(CONFIG.call,(i,on)=>{ const el=callEl.children[i]; el&&el.classList.toggle("lit",on); }); document.getElementById("morse").scrollIntoView({behavior:"smooth"}); };
+callEl.addEventListener("click",e=>{ const m=e.target.closest(".mc"); if(!m) return; const i=+m.dataset.i; playText(CONFIG.call[i],(_,on)=>m.classList.toggle("lit",on)); });
+callEl.addEventListener("keydown",e=>{ if(e.key==="Enter"){ e.target.click(); } });
+function showCode(){ $("#cwOut").textContent = [...$("#cwText").value.toUpperCase()].map(c=>c===" "?" / ":(MORSE[c]||"")).join(" ").replace(/\./g,"·").replace(/-/g,"–"); }
+$("#cwText").addEventListener("input",showCode); showCode();
+$("#cwPlay").onclick = ()=>playText($("#cwText").value);
+$("#cwStop").onclick = stopAll;
+$("#wpm").oninput = e => $("#wpmv").textContent = e.target.value;
+
+
+/* ---------- DX News (από news.json) ---------- */
+(function(){
+  const TYPES = {dxpedition:"DXpedition", special:"Special Call", dx:"DX", contest:"Contest", satellite:"Δορυφόροι / ISS", news:"Νέα"};
+  const MONTHS = ["Ιαν","Φεβ","Μαρ","Απρ","Μαΐ","Ιουν","Ιουλ","Αυγ","Σεπ","Οκτ","Νοε","Δεκ"];
+  const esc = t => String(t??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const d = s => s ? new Date(s+"T00:00:00Z") : null;
+  const fmt = x => `${x.getUTCDate()} ${MONTHS[x.getUTCMonth()]} ${x.getUTCFullYear()}`;
+  const today = new Date(); today.setUTCHours(0,0,0,0);
+  function status(n){
+    const s=d(n.start), e=d(n.end)||s;
+    if(!s) return null;
+    if(e < today) return ["done","Ολοκληρώθηκε"];
+    if(s <= today) return ["live","● Ενεργό τώρα"];
+    const days=Math.round((s-today)/864e5);
+    return ["soon", days===1?"Αύριο":`Σε ${days} μέρες`];
+  }
+  function card(n){
+    const st=status(n), s=d(n.start), e=d(n.end);
+    const dates = s ? `${n.approx?"≈ ":""}${fmt(s)}${e&&+e!==+s?" → "+fmt(e):""}` : "";
+    const meta=[...(n.bands||[]).length?[ (n.bands||[]).join(" · ") ]:[], ...(n.modes||[]).length?[(n.modes||[]).join(" · ")]:[], ...(n.qsl?["QSL: "+n.qsl]:[])];
+    return `<article class="ncard">
+      <div class="ntop"><span class="ntype">${esc(TYPES[n.type]||n.type)}</span>${st?`<span class="nstat ${st[0]}">${st[1]}</span>`:""}</div>
+      <div><div class="ncall">${esc(n.call||n.title)}</div>${n.entity?`<div class="nent">${esc(n.entity)}</div>`:""}</div>
+      ${dates?`<div class="ndates">📅 ${dates}</div>`:""}
+      <p class="nsum">${esc(n.summary)}</p>
+      ${meta.length?`<div class="nmeta">${meta.map(m=>`<span>${esc(m)}</span>`).join("")}</div>`:""}
+      <div class="nsrc">Πηγή: ${(n.sources||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.name)}</a>`).join(", ")}</div>
+    </article>`;
+  }
+  fetch("news.json",{cache:"no-store"}).then(r=>r.json()).then(data=>{
+    const items=(data.items||[]).slice();
+    const isDone=n=>{const st=status(n);return st&&st[0]==="done";};
+    const order=n=>{const st=status(n);return st?({live:0,soon:1}[st[0]]??2):1;};
+    items.sort((a,b)=>order(a)-order(b) || (a.start||a.added||"").localeCompare(b.start||b.added||""));
+    const active=items.filter(n=>!isDone(n)), done=items.filter(isDone).reverse();
+    let filt="all";
+    const types=["all",...new Set(active.map(n=>n.type))];
+    const fEl=$("#nfilters");
+    function render(){
+      const list=active.filter(n=>filt==="all"||n.type===filt);
+      $("#newsGrid").innerHTML = list.length ? list.map(card).join("") : `<p class="nempty">Δεν υπάρχουν ενεργές ειδήσεις αυτή τη στιγμή.</p>`;
+      fEl.innerHTML = types.map(t=>`<button data-t="${t}" class="${t===filt?"act":""}">${t==="all"?"Όλα":esc(TYPES[t]||t)}</button>`).join("");
+    }
+    fEl.addEventListener("click",e=>{const b=e.target.closest("button"); if(b){filt=b.dataset.t;render();}});
+    render();
+    if(done.length){ $("#archiveBox").hidden=false; $("#archN").textContent=done.length; $("#archiveGrid").innerHTML=done.map(card).join(""); }
+  }).catch(()=>{ $("#newsGrid").innerHTML=`<p class="nempty">Οι ειδήσεις δεν φορτώθηκαν.</p>`; });
+})();
+
+// Reveal on scroll
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
