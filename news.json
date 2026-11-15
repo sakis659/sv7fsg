@@ -8,15 +8,29 @@
       "entity": "Christmas Island (IOTA OC-002)",
       "start": "2026-11-16",
       "end": "2026-12-04",
-      "bands": ["160–6m"],
-      "modes": ["SSB", "CW", "FT8"],
+      "bands": [
+        "160–6m"
+      ],
+      "modes": [
+        "SSB",
+        "CW",
+        "FT8"
+      ],
       "qsl": "",
       "summary": "DXpedition με νέους χειριστές από πολλές χώρες, σε συνεργασία της Pacific Islands DXpedition Group με το Youth on the Air. Θα είναι QRV και στο CQ WW DX CW, άρα καλή ευκαιρία για το νησί.",
       "sources": [
-        {"name": "DX-World", "url": "https://www.dx-world.net/vk9xy-christmas-island-2026/"},
-        {"name": "vk9xy2026.com", "url": "https://vk9xy2026.com/"}
+        {
+          "name": "DX-World",
+          "url": "https://www.dx-world.net/vk9xy-christmas-island-2026/"
+        },
+        {
+          "name": "vk9xy2026.com",
+          "url": "https://vk9xy2026.com/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "Christmas Island (IOTA OC-002)",
+      "summary_en": "A youth-focused DXpedition with young operators from several countries, run by the Pacific Islands DXpedition Group with Youth on the Air. They'll also be on during CQ WW DX CW, a great chance to log this island."
     },
     {
       "id": "2026-11-c8k",
@@ -26,13 +40,21 @@
       "start": "2026-11-10",
       "end": "2026-11-20",
       "bands": [],
-      "modes": ["CW", "SSB"],
+      "modes": [
+        "CW",
+        "SSB"
+      ],
       "qsl": "",
       "summary": "Τσέχικη ομάδα είναι ήδη στον αέρα από τη Μοζαμβίκη. Πρόσφατα ξεκίνησε και SSB, με σήματα στα 20m.",
       "sources": [
-        {"name": "DX-World", "url": "https://www.dx-world.net/c8k-mozambique-dxpedition-2026/"}
+        {
+          "name": "DX-World",
+          "url": "https://www.dx-world.net/c8k-mozambique-dxpedition-2026/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "Mozambique",
+      "summary_en": "A Czech team is already on the air from Mozambique. SSB has recently started too, with signals on 20m."
     },
     {
       "id": "2026-11-3x4u",
@@ -41,14 +63,30 @@
       "entity": "Γουινέα",
       "start": "2026-11-11",
       "end": "2026-11-24",
-      "bands": ["160", "80", "40", "30", "20", "15", "10m"],
-      "modes": ["SSB", "CW"],
+      "bands": [
+        "160",
+        "80",
+        "40",
+        "30",
+        "20",
+        "15",
+        "10m"
+      ],
+      "modes": [
+        "SSB",
+        "CW"
+      ],
       "qsl": "",
       "summary": "Δραστηριότητα από τη Γουινέα με έμφαση στα κλασικά modes. Pilot station είναι ο ON9CFG.",
       "sources": [
-        {"name": "DXZone", "url": "https://www.dxzone.com/events/dxpedition/3x4u-guinea/"}
+        {
+          "name": "DXZone",
+          "url": "https://www.dxzone.com/events/dxpedition/3x4u-guinea/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "Guinea",
+      "summary_en": "Activity from Guinea focusing on the classic modes. ON9CFG is the pilot station."
     },
     {
       "id": "2026-11-zk3zl",
@@ -58,14 +96,21 @@
       "start": "2026-11-18",
       "end": "2026-12-01",
       "approx": true,
-      "bands": ["160–6m"],
+      "bands": [
+        "160–6m"
+      ],
       "modes": [],
       "qsl": "",
       "summary": "Η ομάδα ταξιδεύει με πλοίο από τη Σαμόα και θα μείνει περίπου δύο εβδομάδες στην ατόλη, με πολλούς σταθμούς HF. Οι ακριβείς ημερομηνίες θα ανακοινωθούν.",
       "sources": [
-        {"name": "DX-World", "url": "https://www.dx-world.net/zk3zl-tokelau-dxpedition/"}
+        {
+          "name": "DX-World",
+          "url": "https://www.dx-world.net/zk3zl-tokelau-dxpedition/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "Tokelau",
+      "summary_en": "The team travels by ferry from Samoa and will spend about two weeks on the atoll with multiple HF stations. Exact dates are still to be announced."
     },
     {
       "id": "2026-11-c56xa",
@@ -79,9 +124,14 @@
       "qsl": "",
       "summary": "Ο G3XAQ θα είναι QRV από τη Γκάμπια.",
       "sources": [
-        {"name": "POTACAT – DXpeditions 2026", "url": "https://potacat.com/dxpeditions/"}
+        {
+          "name": "POTACAT – DXpeditions 2026",
+          "url": "https://potacat.com/dxpeditions/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "The Gambia",
+      "summary_en": "G3XAQ will be QRV from The Gambia."
     },
     {
       "id": "2026-11-3b8-e70a",
@@ -95,9 +145,14 @@
       "qsl": "",
       "summary": "Ο E70A, γνωστός DXpeditioner, θα είναι QRV από τον Μαυρίκιο.",
       "sources": [
-        {"name": "POTACAT – DXpeditions 2026", "url": "https://potacat.com/dxpeditions/"}
+        {
+          "name": "POTACAT – DXpeditions 2026",
+          "url": "https://potacat.com/dxpeditions/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "Mauritius",
+      "summary_en": "E70A, a well-known DXpeditioner, will be QRV from Mauritius."
     },
     {
       "id": "2026-11-cqww-cw",
@@ -106,14 +161,23 @@
       "entity": "Contest",
       "start": "2026-11-28",
       "end": "2026-11-29",
-      "bands": ["160–10m"],
-      "modes": ["CW"],
+      "bands": [
+        "160–10m"
+      ],
+      "modes": [
+        "CW"
+      ],
       "qsl": "",
       "summary": "Ένα από τα μεγαλύτερα CW contests της χρονιάς. Πολλές DXpeditions θα είναι QRV, άρα ευκαιρία για νέες χώρες.",
       "sources": [
-        {"name": "OnAllBands", "url": "https://www.onallbands.com/dx-engineering-equipment-to-be-used-on-upcoming-youth-focused-christmas-island-dxpedition/"}
+        {
+          "name": "OnAllBands",
+          "url": "https://www.onallbands.com/dx-engineering-equipment-to-be-used-on-upcoming-youth-focused-christmas-island-dxpedition/"
+        }
       ],
-      "added": "2026-11-15"
+      "added": "2026-11-15",
+      "entity_en": "Contest",
+      "summary_en": "One of the biggest CW contests of the year. Many DXpeditions will be active, so it's a chance for new countries."
     }
   ]
 }
