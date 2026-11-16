@@ -30,7 +30,8 @@
           "url": "https://www.dxzone.com/events/dxpedition/a35tv-tonga/"
         }
       ],
-      "added": "2026-11-16"
+      "added": "2026-11-16",
+      "slug": "a35tv-tonga-2026"
     },
     {
       "id": "2026-11-xr0z",
@@ -61,7 +62,8 @@
           "url": "https://www.dxzone.com/events/dxpedition/xr0z-juan-fernandez-is/"
         }
       ],
-      "added": "2026-11-16"
+      "added": "2026-11-16",
+      "slug": "xr0z-juan-fernandez-is-2026"
     },
     {
       "id": "2026-11-5x7w",
@@ -88,7 +90,8 @@
           "url": "https://www.ng3k.com/Misc/adxo.html"
         }
       ],
-      "added": "2026-11-16"
+      "added": "2026-11-16",
+      "slug": "5x7w-uganda-2026"
     },
     {
       "id": "2026-11-zd7wp",
@@ -115,7 +118,8 @@
           "url": "https://www.ng3k.com/Misc/adxo.html"
         }
       ],
-      "added": "2026-11-16"
+      "added": "2026-11-16",
+      "slug": "zd7wp-zd7vj-st-helena-2026"
     },
     {
       "id": "2026-11-xx9txn",
@@ -143,7 +147,8 @@
           "url": "https://www.dx-world.net/xx9txn-macau/"
         }
       ],
-      "added": "2026-11-16"
+      "added": "2026-11-16",
+      "slug": "xx9txn-macau-2026"
     },
     {
       "id": "2026-11-vk9xy",
@@ -174,7 +179,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "Christmas Island (IOTA OC-002)",
-      "summary_en": "A youth-focused DXpedition with young operators from several countries, run by the Pacific Islands DXpedition Group with Youth on the Air. They'll also be on during CQ WW DX CW, a great chance to log this island."
+      "summary_en": "A youth-focused DXpedition with young operators from several countries, run by the Pacific Islands DXpedition Group with Youth on the Air. They'll also be on during CQ WW DX CW, a great chance to log this island.",
+      "slug": "vk9xy-christmas-island-2026"
     },
     {
       "id": "2026-11-c8k",
@@ -198,7 +204,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "Mozambique",
-      "summary_en": "A Czech team is already on the air from Mozambique. SSB has recently started too, with signals on 20m."
+      "summary_en": "A Czech team is already on the air from Mozambique. SSB has recently started too, with signals on 20m.",
+      "slug": "c8k-mozambique-2026"
     },
     {
       "id": "2026-11-3x4u",
@@ -230,7 +237,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "Guinea",
-      "summary_en": "Activity from Guinea focusing on the classic modes. ON9CFG is the pilot station."
+      "summary_en": "Activity from Guinea focusing on the classic modes. ON9CFG is the pilot station.",
+      "slug": "3x4u-guinea-2026"
     },
     {
       "id": "2026-11-zk3zl",
@@ -254,7 +262,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "Tokelau",
-      "summary_en": "The team travels by ferry from Samoa and will spend about two weeks on the atoll with multiple HF stations. Exact dates are still to be announced."
+      "summary_en": "The team travels by ferry from Samoa and will spend about two weeks on the atoll with multiple HF stations. Exact dates are still to be announced.",
+      "slug": "zk3zl-tokelau-2026"
     },
     {
       "id": "2026-11-c56xa",
@@ -275,7 +284,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "The Gambia",
-      "summary_en": "G3XAQ will be QRV from The Gambia."
+      "summary_en": "G3XAQ will be QRV from The Gambia.",
+      "slug": "c56xa-the-gambia-2026"
     },
     {
       "id": "2026-11-3b8-e70a",
@@ -296,7 +306,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "Mauritius",
-      "summary_en": "E70A, a well-known DXpeditioner, will be QRV from Mauritius."
+      "summary_en": "E70A, a well-known DXpeditioner, will be QRV from Mauritius.",
+      "slug": "3b8-e70a-mauritius-2026"
     },
     {
       "id": "2026-11-cqww-cw",
@@ -321,7 +332,8 @@
       ],
       "added": "2026-11-15",
       "entity_en": "Contest",
-      "summary_en": "One of the biggest CW contests of the year. Many DXpeditions will be active, so it's a chance for new countries."
+      "summary_en": "One of the biggest CW contests of the year. Many DXpeditions will be active, so it's a chance for new countries.",
+      "slug": "cq-ww-dx-cw-2026"
     }
   ]
 }
