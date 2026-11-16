@@ -126,13 +126,13 @@ def head(title, desc, url, extra=""):
 </head>
 <body>
 <nav><div class="wrap"><a class="logo" href="/">{CALL}</a>
-<div class="links"><a href="/dx/">DX News</a><a href="/#about">Station</a><a href="/#contact">Contact</a></div></div></nav>
+<div class="links"><a href="/dx/">DX News</a><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a><a href="/#about">Station</a><a href="/#contact">Contact</a></div></div></nav>
 <main class="wrap">"""
 
 
 FOOT = f"""</main>
 <div class="wrap"><footer><span>© {dt.date.today().year} {CALL} · Amateur radio station · Xanthi, Greece</span>
-<span class="s">73 DE {CALL}</span></footer></div>
+<span><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a> · <span class="s">73 DE {CALL}</span></span></footer></div>
 </body></html>
 """
 

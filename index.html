@@ -400,7 +400,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="yr"></span> SV7FSG · <span data-i18n="footer">Ραδιοερασιτεχνικός σταθμός</span></span>
-    <span class="s73">73 DE SV7FSG ·-·-·</span>
+    <span><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a> · <span class="s73">73 DE SV7FSG ·-·-·</span></span>
   </div>
 </footer>
 
@@ -440,7 +440,8 @@ const CONFIG = {
   qsl: { lotw:null, eqsl:true, bureau:null, direct:true, clublog:null },
   qslFooter: "QTH: XANTHI · KN21KD",
   email: "sv7fsg@yahoo.gr",
-  qrz: "https://www.qrz.com/db/SV7FSG"
+  qrz: "https://www.qrz.com/db/SV7FSG",
+  youtube: "https://www.youtube.com/@SV7FSG"
 };
 
 /* ================================================================== */
@@ -526,7 +527,8 @@ function renderText(){
   $("#qslList").innerHTML = qShown.length ? qShown.map(([k,t])=>`<li><span class="st ${CONFIG.qsl[k]?"yes":"no"}">${CONFIG.qsl[k]?"✓":"✕"}</span><div><b>${t}</b><small>${T("q_"+k)}</small></div></li>`).join("") : `<li><span class="st yes">✉</span><div><b>${T("q_ask")}</b><small>${esc(CONFIG.email)}</small></div></li>`;
   $("#contactBtns").innerHTML = `
     <a class="btn btn-primary" href="mailto:${esc(CONFIG.email)}">✉ ${esc(CONFIG.email)}</a>
-    <a class="btn btn-ghost" href="${esc(CONFIG.qrz)}" target="_blank" rel="noopener">QRZ.com →</a>`;
+    <a class="btn btn-ghost" href="${esc(CONFIG.qrz)}" target="_blank" rel="noopener">QRZ.com →</a>
+    ${CONFIG.youtube?`<a class="btn btn-ghost" href="${esc(CONFIG.youtube)}" target="_blank" rel="noopener">▶ YouTube</a>`:""}`;
   tick();
   renderNews();
 }

@@ -154,7 +154,8 @@ def outro_html(w, h):
 <div class="c">
  <div style="font-size:54px;color:#c3cde0;line-height:1.4">Full details, bands &amp; QSL info</div>
  <div class="mono" style="font-size:62px;color:#38e8c6;font-weight:700;margin-top:40px">{SITE_SHORT}</div>
- <div style="font-size:40px;color:#8b9ab3;margin-top:80px">Follow for weekly DX news</div>
+ <div style="font-size:40px;color:#8b9ab3;margin-top:80px">Subscribe for weekly DX news</div>
+ <div class="mono" style="font-size:44px;color:#e6edf7;margin-top:18px">▶ @SV7FSG</div>
  <div class="mono" style="font-size:150px;font-weight:800;color:#ffb547;margin-top:120px;text-shadow:0 0 60px #ffb54766">73</div>
  <div class="mono" style="font-size:52px;letter-spacing:.14em;margin-top:20px">DE {CALL}</div>
 </div></body></html>"""
@@ -281,7 +282,7 @@ def cmd_short():
     txt = (f"TITLE: This Week in DX: {calls} #shorts\n\n"
            f"DESCRIPTION:\nDXpeditions and DX stations on the air this week ({fdate(today)} – {fdate(horizon)} {horizon.year}):\n" +
            "".join(f"• {n.get('call')} – {n.get('entity_en') or ''} ({dates_text(n)}): {SITE_SHORT}/dx/{n.get('slug') or ''}/\n" for n in items) +
-           f"\nSources are listed on each page. 73 de {CALL}\n\n#hamradio #amateurradio #DX #DXpedition #shorts\n")
+           f"\nSources are listed on each page.\nSubscribe for weekly DX news: https://www.youtube.com/@SV7FSG\n73 de {CALL}\n\n#hamradio #amateurradio #DX #DXpedition #shorts\n")
     open(out[:-4] + ".txt", "w", encoding="utf-8").write(txt)
     print(out)
     return out
