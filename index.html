@@ -400,7 +400,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="yr"></span> SV7FSG · <span data-i18n="footer">Ραδιοερασιτεχνικός σταθμός</span></span>
-    <span><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a> · <span class="s73">73 DE SV7FSG ·-·-·</span></span>
+    <span><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a> · <a href="https://www.instagram.com/sv7fsg/" target="_blank" rel="noopener">Instagram</a> · <span class="s73">73 DE SV7FSG ·-·-·</span></span>
   </div>
 </footer>
 
@@ -441,7 +441,8 @@ const CONFIG = {
   qslFooter: "QTH: XANTHI · KN21KD",
   email: "sv7fsg@yahoo.gr",
   qrz: "https://www.qrz.com/db/SV7FSG",
-  youtube: "https://www.youtube.com/@SV7FSG"
+  youtube: "https://www.youtube.com/@SV7FSG",
+  instagram: "https://www.instagram.com/sv7fsg/"
 };
 
 /* ================================================================== */
@@ -528,7 +529,8 @@ function renderText(){
   $("#contactBtns").innerHTML = `
     <a class="btn btn-primary" href="mailto:${esc(CONFIG.email)}">✉ ${esc(CONFIG.email)}</a>
     <a class="btn btn-ghost" href="${esc(CONFIG.qrz)}" target="_blank" rel="noopener">QRZ.com →</a>
-    ${CONFIG.youtube?`<a class="btn btn-ghost" href="${esc(CONFIG.youtube)}" target="_blank" rel="noopener">▶ YouTube</a>`:""}`;
+    ${CONFIG.youtube?`<a class="btn btn-ghost" href="${esc(CONFIG.youtube)}" target="_blank" rel="noopener">▶ YouTube</a>`:""}
+    ${CONFIG.instagram?`<a class="btn btn-ghost" href="${esc(CONFIG.instagram)}" target="_blank" rel="noopener">◎ Instagram</a>`:""}`;
   tick();
   renderNews();
 }

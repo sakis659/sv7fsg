@@ -234,7 +234,8 @@ def cmd_cards(ids):
                f"📻 {' · '.join(n.get('bands') or []) or '—'} | {' · '.join(n.get('modes') or []) or '—'}\n\n"
                f"{n.get('summary_en') or n.get('summary')}\n\n"
                f"Full details & QSL info: {SITE_SHORT}/dx/{slug}/\n"
-               f"Source: {', '.join(s.get('name','') for s in n.get('sources') or [])}\n\n{hashtags(n)}\n")
+               f"Source: {', '.join(s.get('name','') for s in n.get('sources') or [])}\n"
+               f"▶ Weekly DX video: youtube.com/@SV7FSG\n\n{hashtags(n)}\n")
         open(png[:-4] + ".txt", "w", encoding="utf-8").write(cap)
         outs.append(png)
     render_pngs(jobs)
@@ -282,7 +283,7 @@ def cmd_short():
     txt = (f"TITLE: This Week in DX: {calls} #shorts\n\n"
            f"DESCRIPTION:\nDXpeditions and DX stations on the air this week ({fdate(today)} – {fdate(horizon)} {horizon.year}):\n" +
            "".join(f"• {n.get('call')} – {n.get('entity_en') or ''} ({dates_text(n)}): {SITE_SHORT}/dx/{n.get('slug') or ''}/\n" for n in items) +
-           f"\nSources are listed on each page.\nSubscribe for weekly DX news: https://www.youtube.com/@SV7FSG\n73 de {CALL}\n\n#hamradio #amateurradio #DX #DXpedition #shorts\n")
+           f"\nSources are listed on each page.\nSubscribe for weekly DX news: https://www.youtube.com/@SV7FSG\nInstagram: @sv7fsg\n73 de {CALL}\n\n#hamradio #amateurradio #DX #DXpedition #shorts\n")
     open(out[:-4] + ".txt", "w", encoding="utf-8").write(txt)
     print(out)
     return out
