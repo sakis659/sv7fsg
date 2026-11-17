@@ -284,6 +284,11 @@ def cmd_short():
            f"DESCRIPTION:\nDXpeditions and DX stations on the air this week ({fdate(today)} – {fdate(horizon)} {horizon.year}):\n" +
            "".join(f"• {n.get('call')} – {n.get('entity_en') or ''} ({dates_text(n)}): {SITE_SHORT}/dx/{n.get('slug') or ''}/\n" for n in items) +
            f"\nSources are listed on each page.\nSubscribe for weekly DX news: https://www.youtube.com/@SV7FSG\nInstagram: @sv7fsg\n73 de {CALL}\n\n#hamradio #amateurradio #DX #DXpedition #shorts\n")
+    ig = (f"📡 This Week in DX · {fdate(today)} – {fdate(horizon)} {horizon.year}\n\nOn the air this week:\n" +
+          "".join(f"📻 {n.get('call')} – {re.sub(r'\\s*\\(.*?\\)', '', n.get('entity_en') or '')}\n" for n in items) +
+          "\n🎧 Turn the sound on: each callsign in CW!\n🔗 Dates, bands & QSL info: link in bio\n▶ New video every Monday\n\n"
+          f"73 de {CALL}\n\n#hamradio #amateurradio #DX #DXpedition #CW #morsecode #FT8 #reels\n")
+    txt = "===== YOUTUBE =====\n" + txt + "\n===== INSTAGRAM REEL (λεζάντα) =====\n" + ig
     open(out[:-4] + ".txt", "w", encoding="utf-8").write(txt)
     print(out)
     return out
