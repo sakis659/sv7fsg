@@ -1,6 +1,149 @@
 {
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "items": [
+    {
+      "id": "2026-11-sx200h",
+      "type": "special",
+      "call": "SX200H",
+      "entity": "Ερμούπολη, Σύρος (IOTA EU-067)",
+      "entity_en": "Ermoupoli, Syros (IOTA EU-067)",
+      "start": "2026-11-01",
+      "end": "2026-11-30",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "Various"
+      ],
+      "qsl": "LoTW, eQSL, Club Log, QRZ",
+      "summary": "Η Ένωση Ραδιοερασιτεχνών Κυκλάδων τιμά τα 200 χρόνια από την ίδρυση και την ονομασία της Ερμούπολης με το ειδικό διακριτικό SX200H. Ομάδα δέκα χειριστών εκπέμπει στα HF από τη Σύρο σε όλη τη διάρκεια του Νοεμβρίου, οπότε υπάρχει ακόμη χρόνος για ένα QSO.",
+      "summary_en": "The Cyclades Amateur Radio Association marks 200 years since Ermoupoli on Syros was founded and named, using the special call SX200H. A team of ten operators is active on HF throughout November, so there is still time to log it.",
+      "sources": [
+        {
+          "name": "RAAG – SX200H",
+          "url": "https://raag.org/sx200h/"
+        }
+      ],
+      "added": "2026-11-17",
+      "slug": "sx200h-ermoupoli-syros-2026"
+    },
+    {
+      "id": "2026-11-a31w",
+      "type": "dxpedition",
+      "call": "A31W",
+      "entity": "Βαβάου, Τόνγκα (IOTA OC-064)",
+      "entity_en": "Vava'u, Tonga (IOTA OC-064)",
+      "start": "2026-11-21",
+      "end": "2026-11-29",
+      "approx": true,
+      "bands": [
+        "160–6m"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "LoTW",
+      "summary": "Οι Tongan Paradise Contesters (W6NV, K0AV, K7TD) στήνουν σταθμό Multi-2 στο Βαβάου για το CQ WW DX CW. Πριν από τον αγώνα θα δοκιμάζουν διάδοση σε 160m και 6m με τα ατομικά τους διακριτικά A31WW, A31AV και A31TD.",
+      "summary_en": "The Tongan Paradise Contesters (W6NV, K0AV, K7TD) are building a Multi-2 station on Vava'u for CQ WW DX CW. Before the contest they will test 160m and 6m propagation under their own calls A31WW, A31AV and A31TD.",
+      "sources": [
+        {
+          "name": "DX-World – A31W",
+          "url": "https://www.dx-world.net/a31w-tonga/"
+        }
+      ],
+      "added": "2026-11-17",
+      "slug": "a31w-vava-u-tonga-2026"
+    },
+    {
+      "id": "2026-11-vk9ds",
+      "type": "dxpedition",
+      "call": "VK9DS",
+      "entity": "Νησιά Κόκος (Κίλινγκ) και Νήσος των Χριστουγέννων",
+      "entity_en": "Cocos (Keeling) Is. and Christmas Island",
+      "start": "2026-11-20",
+      "end": "2026-12-04",
+      "bands": [
+        "80–6m"
+      ],
+      "modes": [
+        "SSB",
+        "CW",
+        "FT8"
+      ],
+      "qsl": "Club Log, QRZ (after the trip)",
+      "summary": "Το VK9DS θα βγει πρώτα από τα νησιά Κόκος (Κίλινγκ) από 20 έως 27 Νοεμβρίου και μετά από τη Νήσο των Χριστουγέννων από 28 Νοεμβρίου έως 4 Δεκεμβρίου. Δύο σπάνιες οντότητες του Ινδικού σε δύο εβδομάδες, με τα logs να ανεβαίνουν μετά την επιστροφή.",
+      "summary_en": "VK9DS will be active first from Cocos (Keeling) Islands from 20 to 27 November, then from Christmas Island from 28 November to 4 December. Two sought-after Indian Ocean entities in two weeks, with logs uploaded after the trip.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        },
+        {
+          "name": "QRZ.com – VK9DS",
+          "url": "https://www.qrz.com/db/VK9DS"
+        }
+      ],
+      "added": "2026-11-17",
+      "slug": "vk9ds-cocos-is-and-christmas-island-2026"
+    },
+    {
+      "id": "2026-11-5r8ic",
+      "type": "dx",
+      "call": "5R8IC",
+      "entity": "Νήσος Σαιντ Μαρί, Μαδαγασκάρη (IOTA AF-090)",
+      "entity_en": "Ste Marie Island, Madagascar (IOTA AF-090)",
+      "start": "2026-10-25",
+      "end": "2026-12-20",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "CW",
+        "FT8",
+        "SSB"
+      ],
+      "qsl": "LoTW",
+      "summary": "Ο F6ICX είναι ενεργός ως 5R8IC από τη νήσο Σαιντ Μαρί της Μαδαγασκάρης έως τις 20 Δεκεμβρίου, κυρίως σε CW. Καλή ευκαιρία για Μαδαγασκάρη και για το IOTA AF-090, με επιβεβαίωση μέσω LoTW.",
+      "summary_en": "F6ICX is active as 5R8IC from Ste Marie Island, Madagascar, until 20 December, mostly on CW. A good chance for Madagascar and IOTA AF-090, with confirmation via LoTW.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        },
+        {
+          "name": "QRZ.com – 5R8IC",
+          "url": "https://www.qrz.com/db/5R8IC"
+        }
+      ],
+      "added": "2026-11-17",
+      "slug": "5r8ic-ste-marie-island-madagascar-2026"
+    },
+    {
+      "id": "2026-11-ariss-kazan",
+      "type": "satellite",
+      "call": "RS0ISS – ARISS",
+      "entity": "ISS – Λύκειο Νο. 35, Καζάν",
+      "entity_en": "ISS – Lyceum No. 35, Kazan",
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "bands": [
+        "145.800 MHz"
+      ],
+      "modes": [
+        "FM"
+      ],
+      "qsl": "",
+      "summary": "Την Παρασκευή 20 Νοεμβρίου στις 15:15 UTC μαθητές του Λυκείου Νο. 35 του Καζάν θα μιλήσουν απευθείας με τον κοσμοναύτη Σεργκέι Τετεριάτνικοφ στο ISS (RS0ISS). Ο downlink στα 145.800 MHz FM ακούγεται σε όλο το ίχνος του σταθμού, οπότε δοκιμάστε να τον λάβετε.",
+      "summary_en": "On Friday 20 November at 15:15 UTC, students of Lyceum No. 35 in Kazan will talk directly with cosmonaut Sergey Teteryatnikov aboard the ISS (RS0ISS). The 145.800 MHz FM downlink can be heard across the station's footprint, so try to receive it.",
+      "sources": [
+        {
+          "name": "ISS Fan Club",
+          "url": "https://issfanclub.eu/2026/11/13/russia-upcoming-ariss-school-contacts-8/"
+        }
+      ],
+      "added": "2026-11-17",
+      "slug": "rs0iss-ariss-iss-lyceum-no-35-kazan-2026"
+    },
     {
       "id": "2026-11-a35tv",
       "type": "dxpedition",
