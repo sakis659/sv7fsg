@@ -1,6 +1,152 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "items": [
+    {
+      "id": "2026-11-sx602n",
+      "type": "special",
+      "call": "SX602N",
+      "entity": "Ελλάδα – φρεγάτα «Νέαρχος» (F602)",
+      "entity_en": "Greece – frigate HS Nearchos (F602)",
+      "start": "",
+      "end": "",
+      "approx": true,
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "Various"
+      ],
+      "qsl": "",
+      "summary": "Ελληνική ομάδα ραδιοερασιτεχνών βγαίνει στον αέρα με το ειδικό διακριτικό SX602N για την έπαρση της ελληνικής σημαίας στη νέα φρεγάτα «Νέαρχος» (F602) του Πολεμικού Ναυτικού. Συνοδεύεται από δίπλωμα (HS Nearchos Award)· λεπτομέρειες για ημερομηνίες και QSL στη σελίδα της ΕΕΡ.",
+      "summary_en": "A Greek group is on the air as SX602N to mark the raising of the Greek flag on the Hellenic Navy's new frigate HS Nearchos (F602). An award (HS Nearchos Award) is available; see the RAAG page for dates and QSL details.",
+      "sources": [
+        {
+          "name": "RAAG – SX602N",
+          "url": "https://raag.org/sx602n/"
+        }
+      ],
+      "added": "2026-11-18",
+      "slug": "sx602n-greece-frigate-hs-nearchos-2026"
+    },
+    {
+      "id": "2026-11-to9w",
+      "type": "dxpedition",
+      "call": "TO9W",
+      "entity": "Άγιος Μαρτίνος – Saint Martin (IOTA NA-105)",
+      "entity_en": "Saint Martin (IOTA NA-105)",
+      "start": "2026-11-29",
+      "end": "2026-12-11",
+      "bands": [
+        "160–6m"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "RTTY",
+        "FT8",
+        "FT4"
+      ],
+      "qsl": "W9ILY, LoTW, Club Log OQRS",
+      "summary": "Ομάδα οκτώ Αμερικανών χειριστών (K9EL, W9MR, W9AP κ.ά.) επιστρέφει στο γαλλικό τμήμα του Αγίου Μαρτίνου με το TO9W. Θα δουλέψουν από 160 έως 6m σε όλα τα βασικά modes, καλή ευκαιρία για Καραϊβική στα χαμηλά.",
+      "summary_en": "A team of eight US operators (K9EL, W9MR, W9AP and others) returns to the French side of St Martin as TO9W. They plan 160–6m on all the main modes, a good chance for a Caribbean contact on the low bands.",
+      "sources": [
+        {
+          "name": "DXZone – TO9W",
+          "url": "https://www.dxzone.com/events/dxpedition/to9w-st-martin/"
+        }
+      ],
+      "added": "2026-11-18",
+      "slug": "to9w-saint-martin-2026"
+    },
+    {
+      "id": "2026-11-j38w",
+      "type": "dx",
+      "call": "J38W",
+      "entity": "Γρενάδα",
+      "entity_en": "Grenada",
+      "start": "2026-11-22",
+      "end": "2026-12-02",
+      "bands": [
+        "160–10m"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "Digital"
+      ],
+      "qsl": "",
+      "summary": "Το J38W θα είναι QRV από τη Γρενάδα στην Καραϊβική, με CW, SSB και ψηφιακά από 160 έως 10m, και πιθανώς στο CQ WW DX CW. Η διαδρομή QSL δεν έχει ανακοινωθεί ακόμη.",
+      "summary_en": "J38W will be active from Grenada in the Caribbean on CW, SSB and digital modes, 160–10m, likely including CQ WW DX CW. The QSL route has not been announced yet.",
+      "sources": [
+        {
+          "name": "DXZone – J38W",
+          "url": "https://www.dxzone.com/events/dx-operation/j38w-grenada/"
+        }
+      ],
+      "added": "2026-11-18",
+      "slug": "j38w-grenada-2026"
+    },
+    {
+      "id": "2026-11-ox7am",
+      "type": "dx",
+      "call": "OX7AM",
+      "entity": "Γροιλανδία (IOTA NA-018)",
+      "entity_en": "Greenland (IOTA NA-018)",
+      "start": "2026-11-23",
+      "end": "2026-12-07",
+      "approx": true,
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "Various"
+      ],
+      "qsl": "",
+      "summary": "Το OX7AM θα ακούγεται από τη Γροιλανδία για περίπου δύο εβδομάδες, συμπεριλαμβανομένου του CQ WW DX CW. Από την Ελλάδα η διαδρομή περνά κοντά στον πόλο, οπότε αξίζει να το ψάξετε όταν η διάδοση είναι καλή στα 20 και 15m.",
+      "summary_en": "OX7AM will be on the air from Greenland for about two weeks, including CQ WW DX CW. From Greece the path runs close to the pole, so look for it when 20m and 15m are in good shape.",
+      "sources": [
+        {
+          "name": "RAAG – OX7AM",
+          "url": "https://raag.org/ox7am/"
+        },
+        {
+          "name": "DXZone – OX7AM",
+          "url": "https://www.dxzone.com/events/dx-operation/ox7am-greenland/"
+        }
+      ],
+      "added": "2026-11-18",
+      "slug": "ox7am-greenland-2026"
+    },
+    {
+      "id": "2026-12-arrl-160",
+      "type": "contest",
+      "call": "ARRL 160-Meter Contest",
+      "entity": "Contest",
+      "entity_en": "Contest",
+      "start": "2026-12-04",
+      "end": "2026-12-06",
+      "bands": [
+        "160m"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "",
+      "summary": "Από Παρασκευή 4/12 στις 22:00 UTC έως Κυριακή 6/12 στις 15:59 UTC, CW μόνο στα 160m. Οι σταθμοί εκτός Αμερικής δουλεύουν μόνο W/VE (όχι DX με DX), οπότε είναι καλό τεστ για την κεραία σας στα 160 προς τον Ατλαντικό.",
+      "summary_en": "From Friday 4 Dec 2200 UTC to Sunday 6 Dec 1559 UTC, CW only on 160m. DX stations work only W/VE (no DX-to-DX), so it is a good test of your 160m antenna across the Atlantic.",
+      "sources": [
+        {
+          "name": "ARRL – 160 Meter Contest",
+          "url": "https://www.arrl.org/160-meter"
+        },
+        {
+          "name": "ARRL Contest Calendar",
+          "url": "https://www.arrl.org/Contest-Calendar"
+        }
+      ],
+      "added": "2026-11-18",
+      "slug": "arrl-160-meter-contest-2026"
+    },
     {
       "id": "2026-11-sx200h",
       "type": "special",
