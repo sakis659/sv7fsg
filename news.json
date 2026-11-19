@@ -1,28 +1,192 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "items": [
+    {
+      "id": "2026-11-ft4ym",
+      "type": "dxpedition",
+      "call": "FT4YM",
+      "entity": "Ανταρκτική – σταθμός Concordia (IOTA AN-016)",
+      "entity_en": "Antarctica – Concordia Station (IOTA AN-016)",
+      "start": "2026-11-20",
+      "end": "2027-01-31",
+      "approx": true,
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "SSB",
+        "FT8",
+        "FT4"
+      ],
+      "qsl": "F5PFP",
+      "summary": "Ο David, F4KFT, στήνει σταθμό στη γαλλοϊταλική βάση Concordia, στο οροπέδιο της Ανταρκτικής, και τα πρώτα σήματα αναμένονται μέσα στις επόμενες μέρες. Θα μείνει εκεί ως τα τέλη Ιανουαρίου και αργότερα σχεδιάζει δραστηριότητα από το Dumont d'Urville (AN-017) και ως /MM από το παγοθραυστικό L'Astrolabe· το πρόγραμμα μπορεί να αλλάξει.",
+      "summary_en": "David, F4KFT, is setting up a station at the French-Italian Concordia base on the Antarctic plateau, with first signals expected within days. He stays there until late January and later plans activity from Dumont d'Urville (AN-017) and as /MM from the icebreaker L'Astrolabe; the schedule may change.",
+      "sources": [
+        {
+          "name": "DX-World – FT4YM",
+          "url": "https://www.dx-world.net/ft4ym-antarctica/"
+        }
+      ],
+      "added": "2026-11-19",
+      "slug": "ft4ym-antarctica-concordia-station-2026"
+    },
+    {
+      "id": "2026-12-c21gd",
+      "type": "dx",
+      "call": "C21GD",
+      "entity": "Ναούρου",
+      "entity_en": "Nauru",
+      "start": "2026-12-10",
+      "end": "2026-12-16",
+      "bands": [
+        "80–6m",
+        "RS-44"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "FT8",
+        "FT4"
+      ],
+      "qsl": "LoTW, Club Log OQRS",
+      "summary": "Ο Shinji, JM1GDA, επιστρέφει στη μικρή νησιωτική χώρα του Ειρηνικού για μία εβδομάδα στα μέσα Δεκεμβρίου. Θα είναι στον αέρα από τα 80 ως τα 6 μέτρα και θα δοκιμάσει και επαφές μέσω του δορυφόρου RS-44 (grid RI39LL).",
+      "summary_en": "Shinji, JM1GDA, returns to the tiny Pacific island nation for a week in mid-December. He will be active on 80–6m and will also try contacts via the RS-44 satellite (grid RI39LL).",
+      "sources": [
+        {
+          "name": "DX-World – C21GD",
+          "url": "https://www.dx-world.net/c21gd-nauru/"
+        },
+        {
+          "name": "POTACAT – DXpeditions",
+          "url": "https://potacat.com/dxpeditions/"
+        }
+      ],
+      "added": "2026-11-19",
+      "slug": "c21gd-nauru-2026"
+    },
+    {
+      "id": "2026-11-k6vhf-hr9",
+      "type": "dx",
+      "call": "K6VHF/HR9",
+      "entity": "Ροατάν, Ονδούρα (IOTA NA-057)",
+      "entity_en": "Roatan, Honduras (IOTA NA-057)",
+      "start": "2026-11-25",
+      "end": "2026-12-05",
+      "bands": [
+        "160–6m"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "RTTY",
+        "FT8",
+        "FT4"
+      ],
+      "qsl": "Direct via K6VHF",
+      "summary": "Ο Alex, K6VHF, θα εκπέμπει από το νησί Ροατάν της Ονδούρας για περίπου δέκα μέρες, μαζί και το Σαββατοκύριακο του CQ WW CW. Φέρνει verticals, hexbeam και delta loop, οπότε αξίζει να τον ψάξετε και στα χαμηλά.",
+      "summary_en": "Alex, K6VHF, will be on the air from Roatan Island, Honduras for about ten days, including the CQ WW CW weekend. He brings verticals, a hexbeam and a delta loop, so look for him on the low bands too.",
+      "sources": [
+        {
+          "name": "DX-World – K6VHF/HR9",
+          "url": "https://www.dx-world.net/k6vhf-hr9-roatan-island-na-057/"
+        },
+        {
+          "name": "POTACAT – DXpeditions",
+          "url": "https://potacat.com/dxpeditions/"
+        }
+      ],
+      "added": "2026-11-19",
+      "slug": "k6vhf-hr9-roatan-honduras-2026"
+    },
+    {
+      "id": "2026-11-e51a",
+      "type": "dx",
+      "call": "E51A",
+      "entity": "Νότια Νησιά Κουκ (Ραροτόνγκα)",
+      "entity_en": "South Cook Islands (Rarotonga)",
+      "start": "2026-11-15",
+      "end": "2026-11-22",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "CW",
+        "FT8"
+      ],
+      "qsl": "via YT5A",
+      "summary": "Ο Hrane, YT5A, είναι ήδη ενεργός από τη Ραροτόνγκα σε CW και FT8, σε στυλ διακοπών, ως τις 22 Νοεμβρίου. Η δραστηριότητα λειτουργεί και ως προετοιμασία για μελλοντική DXpedition στο Manihiki των Βόρειων Νησιών Κουκ.",
+      "summary_en": "Hrane, YT5A, is already active holiday-style from Rarotonga on CW and FT8 until 22 November. The trip also serves as preparation for a future DXpedition to Manihiki in the North Cook Islands.",
+      "sources": [
+        {
+          "name": "DX-World – E51A",
+          "url": "https://www.dx-world.net/e51a-cook-islands/"
+        },
+        {
+          "name": "POTACAT – DXpeditions",
+          "url": "https://potacat.com/dxpeditions/"
+        }
+      ],
+      "added": "2026-11-19",
+      "slug": "e51a-south-cook-islands-2026"
+    },
+    {
+      "id": "2026-11-d44jb",
+      "type": "dx",
+      "call": "D44JB",
+      "entity": "Σάντο Αντάο, Πράσινο Ακρωτήριο",
+      "entity_en": "Santo Antao, Cape Verde",
+      "start": "2026-11-14",
+      "end": "2026-11-20",
+      "approx": true,
+      "bands": [
+        "80–10m"
+      ],
+      "modes": [
+        "SSB",
+        "FT8"
+      ],
+      "qsl": "LoTW, Club Log OQRS",
+      "summary": "Ο Charlie, EI8JB, εκπέμπει από το νησί Σάντο Αντάο με DX Commander vertical και δίπολα, και αναφέρει εξαιρετική διάδοση. Τελευταίες μέρες της δραστηριότητας, που προγραμματίζεται να κλείσει στις 20 Νοεμβρίου· είναι καλή ευκαιρία και για 80m FT8.",
+      "summary_en": "Charlie, EI8JB, is operating from Santo Antao island with a DX Commander vertical and dipoles, reporting excellent conditions. These are the final days of the activity, planned to end on 20 November; a good chance for 80m FT8 too.",
+      "sources": [
+        {
+          "name": "DX-World – D44JB",
+          "url": "https://www.dx-world.net/d44jb-cape-verde/"
+        }
+      ],
+      "added": "2026-11-19",
+      "slug": "d44jb-santo-antao-cape-verde-2026"
+    },
     {
       "id": "2026-11-sx602n",
       "type": "special",
       "call": "SX602N",
       "entity": "Ελλάδα – φρεγάτα «Νέαρχος» (F602)",
       "entity_en": "Greece – frigate HS Nearchos (F602)",
-      "start": "",
-      "end": "",
-      "approx": true,
+      "start": "2026-11-11",
+      "end": "2026-12-10",
+      "approx": false,
       "bands": [
-        "HF"
+        "80–6m",
+        "QO-100"
       ],
       "modes": [
-        "Various"
+        "CW",
+        "SSB",
+        "FT8",
+        "FT4"
       ],
-      "qsl": "",
-      "summary": "Ελληνική ομάδα ραδιοερασιτεχνών βγαίνει στον αέρα με το ειδικό διακριτικό SX602N για την έπαρση της ελληνικής σημαίας στη νέα φρεγάτα «Νέαρχος» (F602) του Πολεμικού Ναυτικού. Συνοδεύεται από δίπλωμα (HS Nearchos Award)· λεπτομέρειες για ημερομηνίες και QSL στη σελίδα της ΕΕΡ.",
-      "summary_en": "A Greek group is on the air as SX602N to mark the raising of the Greek flag on the Hellenic Navy's new frigate HS Nearchos (F602). An award (HS Nearchos Award) is available; see the RAAG page for dates and QSL details.",
+      "qsl": "Free e-award (RAAG award system)",
+      "summary": "Το ειδικό διακριτικό SX602N τιμά την έπαρση της ελληνικής σημαίας στη νέα φρεγάτα «Νέαρχος» (F602) και εκπέμπει από το Ναυτικό Οχυρό Βοτανικού. Είναι ενεργό ως τις 10 Δεκεμβρίου από τα 80 ως τα 6 μέτρα και μέσω QO-100· ένα έγκυρο QSO αρκεί για το δωρεάν ηλεκτρονικό δίπλωμα «HS Nearchos (F602) Award» της ΕΕΡ.",
+      "summary_en": "Special call SX602N marks the raising of the Greek flag on the Hellenic Navy's new frigate HS Nearchos (F602), operating from the Votanikos Naval Fort. It is on the air until 10 December on 80–6m and via QO-100; a single valid QSO earns the free electronic HS Nearchos (F602) Award from RAAG.",
       "sources": [
         {
           "name": "RAAG – SX602N",
           "url": "https://raag.org/sx602n/"
+        },
+        {
+          "name": "SvZone – SX602N",
+          "url": "https://www.svzone.eu/search/label/%CE%95%CE%BA%CE%B4%CE%B7%CE%BB%CF%8E%CF%83%CE%B5%CE%B9%CF%82"
         }
       ],
       "added": "2026-11-18",
@@ -534,24 +698,28 @@
       "type": "dxpedition",
       "call": "ZK3ZL",
       "entity": "Tokelau",
-      "start": "2026-11-18",
-      "end": "2026-12-01",
+      "start": "",
+      "end": "",
       "approx": true,
       "bands": [
         "160–6m"
       ],
       "modes": [],
       "qsl": "",
-      "summary": "Η ομάδα ταξιδεύει με πλοίο από τη Σαμόα και θα μείνει περίπου δύο εβδομάδες στην ατόλη, με πολλούς σταθμούς HF. Οι ακριβείς ημερομηνίες θα ανακοινωθούν.",
+      "summary": "Η DXpedition στο Τοκελάου αναβλήθηκε: λόγω διοικητικού λάθους μεταφέρεται για τον Νοέμβριο του 2027. Δεν θα υπάρξει δραστηριότητα ZK3ZL φέτος· οι νέες ημερομηνίες θα ανακοινωθούν.",
       "sources": [
         {
           "name": "DX-World",
           "url": "https://www.dx-world.net/zk3zl-tokelau-dxpedition/"
+        },
+        {
+          "name": "POTACAT – DXpeditions",
+          "url": "https://potacat.com/dxpeditions/"
         }
       ],
       "added": "2026-11-15",
       "entity_en": "Tokelau",
-      "summary_en": "The team travels by ferry from Samoa and will spend about two weeks on the atoll with multiple HF stations. Exact dates are still to be announced.",
+      "summary_en": "The Tokelau DXpedition has been postponed: due to an administrative error it moves to November 2027. There will be no ZK3ZL activity this year; new dates are to be announced.",
       "slug": "zk3zl-tokelau-2026"
     },
     {
