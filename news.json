@@ -1,6 +1,149 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "items": [
+    {
+      "id": "2026-11-3b9kw",
+      "type": "dx",
+      "call": "3B9KW",
+      "entity": "Νήσος Ροντρίγκες",
+      "entity_en": "Rodrigues Island",
+      "start": "2026-10-20",
+      "end": "2026-12-02",
+      "approx": true,
+      "bands": [
+        "160–6m"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "Digital"
+      ],
+      "qsl": "LoTW",
+      "summary": "Ο M0CFW (JK3GAD) βρίσκεται στη Ροντρίγκες, στον Ινδικό Ωκεανό, και εκπέμπει ως 3B9/M0CFW ως τις αρχές Δεκεμβρίου. Στο CQ WW DX CW (28–29/11) θα βγει με το contest call 3B9KW, μια καλή ευκαιρία για το σπάνιο entity από την Ελλάδα.",
+      "summary_en": "M0CFW (JK3GAD) is on Rodrigues Island in the Indian Ocean, signing 3B9/M0CFW until early December. For the CQ WW DX CW contest (Nov 28–29) he will use the contest call 3B9KW, a good chance to log this rare entity.",
+      "sources": [
+        {
+          "name": "DX-World – 3B9KW",
+          "url": "https://www.dx-world.net/3b9kw-rodrigues-island/"
+        },
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-20",
+      "slug": "3b9kw-rodrigues-island-2026"
+    },
+    {
+      "id": "2026-11-tz4am",
+      "type": "dx",
+      "call": "TZ4AM",
+      "entity": "Μάλι",
+      "entity_en": "Mali",
+      "start": "2026-10-22",
+      "end": "2026-12-02",
+      "bands": [
+        "80–6m"
+      ],
+      "modes": [
+        "CW",
+        "SSB"
+      ],
+      "qsl": "Direct via KX4R",
+      "summary": "Ο KX4R είναι ενεργός από το Μάλι ως TZ4AM μέχρι τις 2 Δεκεμβρίου. Δουλεύει CW και SSB από τα 80 ως τα 6 μέτρα, και το Μάλι παραμένει ζητούμενο για πολλούς Ευρωπαίους.",
+      "summary_en": "KX4R is active from Mali as TZ4AM until December 2. He operates CW and SSB on 80–6m, and Mali remains a wanted entity for many European stations.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-20",
+      "slug": "tz4am-mali-2026"
+    },
+    {
+      "id": "2026-11-v6aiu",
+      "type": "dx",
+      "call": "V6AIU",
+      "entity": "Μικρονησία (Truk, νήσος Weno)",
+      "entity_en": "Micronesia (Truk, Weno Island)",
+      "start": "2026-11-26",
+      "end": "2026-12-01",
+      "bands": [
+        "80–10m"
+      ],
+      "modes": [
+        "CW",
+        "FT8",
+        "RTTY"
+      ],
+      "qsl": "Club Log OQRS",
+      "summary": "Ο JH3AIU θα εκπέμπει από τη Weno των Ομόσπονδων Πολιτειών της Μικρονησίας από 26/11 ως 1/12, με 300–600 W. Η σύντομη εξόρμηση πέφτει πάνω στο CQ WW DX CW, οπότε αξίζει να τον αναζητήσετε σε CW, FT8 και RTTY.",
+      "summary_en": "JH3AIU will be on the air from Weno in the Federated States of Micronesia from Nov 26 to Dec 1, running 300–600 W. The short trip overlaps the CQ WW DX CW weekend, so look for him on CW, FT8 and RTTY.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-20",
+      "slug": "v6aiu-micronesia-2026"
+    },
+    {
+      "id": "2026-11-pj7ww",
+      "type": "dx",
+      "call": "PJ7WW / FS",
+      "entity": "Sint Maarten και Saint Martin",
+      "entity_en": "Sint Maarten and Saint Martin",
+      "start": "2026-11-23",
+      "end": "2026-12-09",
+      "bands": [
+        "160–10m"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "Club Log OQRS, DL1MGB (B/d)",
+      "summary": "Ο DL1MGB θα δουλέψει μόνο CW ως PJ7WW από το ολλανδικό Sint Maarten (23–30/11) και στη συνέχεια από το γαλλικό Saint Martin (FS, 30/11–9/12). Δύο entities στο ίδιο νησί, από τα 160 ως τα 10 μέτρα.",
+      "summary_en": "DL1MGB will operate CW only as PJ7WW from Dutch Sint Maarten (Nov 23–30), then from French Saint Martin (FS, Nov 30–Dec 9). Two entities on one island, on 160–10m.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-20",
+      "slug": "pj7ww-fs-sint-maarten-and-saint-martin-2026"
+    },
+    {
+      "id": "2026-11-vp8taa",
+      "type": "dx",
+      "call": "VP8TAA",
+      "entity": "Νήσοι Φόκλαντ",
+      "entity_en": "Falkland Islands",
+      "start": "2026-11-26",
+      "end": "2026-12-31",
+      "approx": true,
+      "bands": [
+        "40–10m"
+      ],
+      "modes": [
+        "SSB",
+        "FT8",
+        "CW"
+      ],
+      "qsl": "Direct via MW0KZN",
+      "summary": "Ο MW0KZN ξεκινά στις 26 Νοεμβρίου μια μακρά παραμονή στα Φόκλαντ, κυρίως στα 40–10 μέτρα με SSB, FT8 και αργό CW. Η λήξη αναφέρεται ως τέλη Δεκεμβρίου, αλλά ίσως συνεχίσει ως τα τέλη Φεβρουαρίου.",
+      "summary_en": "MW0KZN begins a long stay in the Falkland Islands on November 26, mainly on 40–10m with SSB, FT8 and slow CW. The end date is listed as late December, but the activity may continue until late February.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/Misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-20",
+      "slug": "vp8taa-falkland-islands-2026"
+    },
     {
       "id": "2026-11-ft4ym",
       "type": "dxpedition",
