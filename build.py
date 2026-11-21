@@ -119,7 +119,12 @@ def head(title, desc, url, extra=""):
 <link rel="alternate" type="application/rss+xml" title="{CALL} DX News" href="{SITE}/feed.xml">
 <meta property="og:type" content="article"><meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{e(url)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:site_name" content="{CALL}">
+<meta property="og:image" content="{SITE}/assets/og-dx.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{CALL} DX News">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{SITE}/assets/og-dx.jpg">
 <link rel="icon" href="/favicon.svg">
 <link rel="stylesheet" href="/assets/dx.css">
 {extra}
