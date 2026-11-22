@@ -1,6 +1,149 @@
 {
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "items": [
+    {
+      "id": "2026-11-t88dt",
+      "type": "dxpedition",
+      "call": "T88DT",
+      "entity": "Παλάου (IOTA OC-009)",
+      "entity_en": "Palau (IOTA OC-009)",
+      "start": "2026-11-25",
+      "end": "2026-12-03",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "",
+      "summary": "Ο JH1OLB θα βγει από το Παλάου ως T88DT, κυρίως σε CW, με συμμετοχή γύρω από το CQ WW DX CW. Από την Ελλάδα αξίζει να το κυνηγήσετε στις ψηλές μπάντες τα πρωινά προς την Ασία-Ειρηνικό.",
+      "summary_en": "JH1OLB will be active from Palau as T88DT, mainly on CW and around the CQ WW DX CW Contest. Morning openings toward the Pacific on the higher bands give European stations the best chance.",
+      "sources": [
+        {
+          "name": "DXZone",
+          "url": "https://www.dxzone.com/events/dxpedition/t88dt-palau/"
+        }
+      ],
+      "added": "2026-11-22",
+      "slug": "t88dt-palau-2026"
+    },
+    {
+      "id": "2026-12-3b8gy",
+      "type": "dx",
+      "call": "3B8GY",
+      "entity": "Μαυρίκιος (IOTA AF-049)",
+      "entity_en": "Mauritius (IOTA AF-049)",
+      "start": "2026-12-03",
+      "end": "2026-12-15",
+      "bands": [
+        "40m",
+        "30m",
+        "20m",
+        "15m",
+        "10m"
+      ],
+      "modes": [
+        "CW",
+        "SSB"
+      ],
+      "qsl": "Direct (SP2JMB), Club Log OQRS",
+      "summary": "Ο SP2JMB θα είναι QRV από τον Μαυρίκιο ως 3B8GY στις αρχές Δεκεμβρίου, από τα 40 ως τα 10 μέτρα, με προσθήκη και CW. Καλή ευκαιρία για Αφρική-Ινδικό με καλά σήματα προς την Ευρώπη.",
+      "summary_en": "SP2JMB plans to operate from Mauritius as 3B8GY in early December on 40 to 10 metres, with CW now added. Paths from Europe to the Indian Ocean are usually good at this time of year.",
+      "sources": [
+        {
+          "name": "DXZone",
+          "url": "https://www.dxzone.com/events/dx-operation/3b8gy-mauritius/"
+        }
+      ],
+      "added": "2026-11-22",
+      "slug": "3b8gy-mauritius-2026"
+    },
+    {
+      "id": "2026-11-vp2v-we9g",
+      "type": "dx",
+      "call": "VP2V/WE9G",
+      "entity": "Βρετανικές Παρθένοι Νήσοι",
+      "entity_en": "British Virgin Islands",
+      "start": "2026-11-29",
+      "end": "2026-12-09",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "FT8"
+      ],
+      "qsl": "Direct (WE9G), LoTW, Club Log OQRS",
+      "summary": "Ο WE9G θα δουλέψει από τις Βρετανικές Παρθένους Νήσους ως VP2V/WE9G, σε CW, SSB και FT8. Η δραστηριότητα παρατάθηκε ως τις 9 Δεκεμβρίου, οπότε υπάρχει άνεση χρόνου για ένα QSO από την Ελλάδα.",
+      "summary_en": "WE9G will be on the air from the British Virgin Islands as VP2V/WE9G on CW, SSB and FT8. The activity has been extended to 9 December, leaving plenty of time to log it from Europe.",
+      "sources": [
+        {
+          "name": "DXZone",
+          "url": "https://www.dxzone.com/events/dx-operation/vp2v-we9g-br-virgin-is/"
+        }
+      ],
+      "added": "2026-11-22",
+      "slug": "vp2v-we9g-british-virgin-islands-2026"
+    },
+    {
+      "id": "2026-11-4u1itu",
+      "type": "special",
+      "call": "4U1ITU",
+      "entity": "Έδρα ITU, Γενεύη",
+      "entity_en": "ITU Headquarters, Geneva",
+      "start": "2026-11-18",
+      "end": "2026-11-26",
+      "bands": [
+        "160–10m"
+      ],
+      "modes": [
+        "CW",
+        "SSB",
+        "Digital"
+      ],
+      "qsl": "",
+      "summary": "Ο σταθμός 4U1ITU από την έδρα της Διεθνούς Ένωσης Τηλεπικοινωνιών στη Γενεύη είναι ενεργός αυτές τις μέρες από τα 160 ως τα 10 μέτρα. Μετράει ως ξεχωριστή οντότητα DXCC και ακούγεται εύκολα από την Ελλάδα.",
+      "summary_en": "The 4U1ITU station at the International Telecommunication Union headquarters in Geneva is active these days on 160 to 10 metres. It counts as a separate DXCC entity and is an easy contact from most of Europe.",
+      "sources": [
+        {
+          "name": "DXZone",
+          "url": "https://www.dxzone.com/events/dxpedition/4u1itu-itu-hq/"
+        }
+      ],
+      "added": "2026-11-22",
+      "slug": "4u1itu-itu-headquarters-geneva-2026"
+    },
+    {
+      "id": "2026-11-fr-g3txf",
+      "type": "dx",
+      "call": "FR/G3TXF",
+      "entity": "Ρεϊνιόν (IOTA AF-016)",
+      "entity_en": "Reunion Island (IOTA AF-016)",
+      "start": "2026-11-25",
+      "end": "2026-11-29",
+      "approx": true,
+      "bands": [
+        "30m",
+        "17m",
+        "15m",
+        "12m"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "LoTW, Club Log OQRS",
+      "summary": "Ο έμπειρος G3TXF θα είναι QRV από τη Ρεϊνιόν σε CW, κυρίως στις μπάντες WARC και στα 15 μέτρα. Οι ημερομηνίες διαφέρουν ανάμεσα στις πηγές, με βασική δραστηριότητα το τριήμερο 27–29 Νοεμβρίου.",
+      "summary_en": "Veteran operator G3TXF will be on CW from Reunion Island, focusing on the WARC bands plus 15 metres. Sources differ on the exact dates, with the main activity expected around 27–29 November.",
+      "sources": [
+        {
+          "name": "DXZone",
+          "url": "https://www.dxzone.com/events/dx-operation/fr-g3txf-reunion-island/"
+        }
+      ],
+      "added": "2026-11-22",
+      "slug": "fr-g3txf-reunion-island-2026"
+    },
     {
       "id": "2026-11-3y6bua",
       "type": "dx",
