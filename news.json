@@ -1,6 +1,135 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "items": [
+    {
+      "id": "2026-12-xj1m",
+      "type": "special",
+      "call": "XJ1M",
+      "entity": "Νέα Γη, Καναδάς",
+      "entity_en": "Newfoundland, Canada",
+      "start": "2026-12-01",
+      "end": "2026-12-31",
+      "bands": [],
+      "modes": [],
+      "qsl": "LoTW, Club Log, QRZ (no cards)",
+      "summary": "Σταθμοί VO1 θα κρατούν on air όλο τον Δεκέμβριο το ειδικό διακριτικό XJ1M, για τα 125 χρόνια από την πρώτη υπερατλαντική λήψη του Marconi στις 12 Δεκεμβρίου 1901. Την ίδια μέρα του 2026 έχει προγραμματιστεί ειδική εκπομπή από το Signal Hill του St. John's, εκεί όπου έγινε η ιστορική λήψη. Επιβεβαίωση μόνο ηλεκτρονικά.",
+      "summary_en": "VO1 operators will keep the special callsign XJ1M on the air throughout December to mark 125 years since Marconi's first transatlantic reception on 12 December 1901. A special activation is planned on the anniversary day from Signal Hill in St. John's, the site of the historic reception. Confirmations are electronic only.",
+      "sources": [
+        {
+          "name": "425 DX News #1855",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855"
+        }
+      ],
+      "added": "2026-11-23",
+      "slug": "xj1m-newfoundland-canada-2026"
+    },
+    {
+      "id": "2026-12-vp8thw",
+      "type": "dx",
+      "call": "VP8THW",
+      "entity": "Νήσοι Φώκλαντ (IOTA SA-002)",
+      "entity_en": "Falkland Islands (IOTA SA-002)",
+      "start": "2026-12-12",
+      "end": "2027-01-02",
+      "bands": [
+        "40m",
+        "20m",
+        "17m",
+        "15m",
+        "12m",
+        "10m"
+      ],
+      "modes": [
+        "SSB",
+        "FT8"
+      ],
+      "qsl": "LoTW, eQSL, DL7HW",
+      "summary": "Ο DL7HW (Herbert) θα εκπέμπει ως VP8THW από τα Φώκλαντ από τις 12 Δεκεμβρίου ως τις 2 Ιανουαρίου, από σημεία στο Ανατολικό και το Δυτικό νησί, με αρκετές πρώτες ενεργοποιήσεις SOTA. Θα δώσει έμφαση στα 40 και 20 μέτρα σε SSB και FT8, μια καλή ευκαιρία για τη Νότια Αμερική τα βράδια.",
+      "summary_en": "DL7HW (Herbert) will be on the air as VP8THW from the Falklands from 12 December to 2 January, operating from sites on East and West Falkland, including several first SOTA activations. He will focus on 40 and 20 metres in SSB and FT8, a good evening chance for this South Atlantic entity.",
+      "sources": [
+        {
+          "name": "DL7HW",
+          "url": "https://www.dl7hw-news.com/"
+        },
+        {
+          "name": "NG3K ADXO",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-23",
+      "slug": "vp8thw-falkland-islands-2026"
+    },
+    {
+      "id": "2026-11-d44lz",
+      "type": "dx",
+      "call": "D44LZ",
+      "entity": "Νήσος Σαλ, Πράσινο Ακρωτήριο (IOTA AF-086)",
+      "entity_en": "Sal Island, Cape Verde (IOTA AF-086)",
+      "start": "2026-11-19",
+      "end": "2026-12-02",
+      "bands": [],
+      "modes": [],
+      "qsl": "LZ1JZ",
+      "summary": "Οι Βούλγαροι LZ5VV και LZ1GL είναι ενεργοί από το νησί Σαλ του Πράσινου Ακρωτηρίου ως D44LZ ως τις 2 Δεκεμβρίου. Θα συμμετάσχουν και στο CQ WW DX CW, οπότε το σήμα τους προς την Ευρώπη θα ακούγεται δυνατά στις περισσότερες μπάντες.",
+      "summary_en": "Bulgarian operators LZ5VV and LZ1GL are active from Sal Island, Cape Verde, as D44LZ until 2 December. They will also take part in the CQ WW DX CW Contest, so expect a strong signal into Europe on most bands.",
+      "sources": [
+        {
+          "name": "425 DX News #1855",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855"
+        }
+      ],
+      "added": "2026-11-23",
+      "slug": "d44lz-sal-island-cape-verde-2026"
+    },
+    {
+      "id": "2026-11-cq80bh",
+      "type": "special",
+      "call": "CQ80BH",
+      "entity": "Αζόρες",
+      "entity_en": "Azores",
+      "start": "2026-11-19",
+      "end": "2026-11-25",
+      "bands": [],
+      "modes": [],
+      "qsl": "OH2BH direct, LoTW",
+      "summary": "Ο θρυλικός DXer Martti Laine, OH2BH, γιορτάζει τα 80ά του γενέθλια από τις Αζόρες με φίλους, με το ειδικό διακριτικό CQ80BH ως τις 25 Νοεμβρίου. Οι Αζόρες ακούγονται εύκολα από την Ελλάδα, οπότε είναι μια ωραία ευκαιρία για ένα QSO-ευχή.",
+      "summary_en": "Legendary DXer Martti Laine, OH2BH, is celebrating his 80th birthday from the Azores with friends, using the special callsign CQ80BH until 25 November. The Azores are an easy path from Europe, so it is a nice chance for a birthday QSO.",
+      "sources": [
+        {
+          "name": "425 DX News #1855",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855"
+        },
+        {
+          "name": "QRZ.com",
+          "url": "https://www.qrz.com/db/CQ80BH"
+        }
+      ],
+      "added": "2026-11-23",
+      "slug": "cq80bh-azores-2026"
+    },
+    {
+      "id": "2026-12-exams-sv",
+      "type": "news",
+      "call": "SV Licence Exams",
+      "entity": "Ελλάδα",
+      "entity_en": "Greece",
+      "start": "2026-12-14",
+      "end": "2026-12-16",
+      "approx": true,
+      "bands": [],
+      "modes": [],
+      "qsl": "",
+      "summary": "Οι Περιφερειακές Ενότητες ανακοινώνουν τις εξετάσεις για πτυχίο ραδιοερασιτέχνη Κατηγορίας 1 και Εισαγωγικού επιπέδου (Β΄ περίοδος 2026). Στην Καστοριά, για παράδειγμα, οι εξετάσεις γίνονται στις 14 και 16 Δεκεμβρίου και οι αιτήσεις υποβάλλονται ηλεκτρονικά στο radioerasitexnes.gov.gr ως τις 4 Δεκεμβρίου. Οι ημερομηνίες διαφέρουν ανά περιοχή, γι' αυτό ελέγξτε την ανακοίνωση της δικής σας Περιφέρειας.",
+      "summary_en": "Greek regional authorities are announcing the second 2026 exam session for the Class 1 and Entry-level amateur radio licences. In Kastoria, for example, exams take place on 14 and 16 December, with online applications at radioerasitexnes.gov.gr until 4 December. Dates vary by region, so check your own regional announcement.",
+      "sources": [
+        {
+          "name": "Π.Ε. Καστοριάς",
+          "url": "https://kastoria.pdm.gov.gr/prokiryxi-exetaseon-gia-tin-apoktisi-ptychiou-radioerasitechni-katigorias-1-kai-eisagogikou-epipedou-v-periodou-2026/"
+        }
+      ],
+      "added": "2026-11-23",
+      "slug": "sv-licence-exams-greece-december-2026"
+    },
     {
       "id": "2026-11-t88dt",
       "type": "dxpedition",
