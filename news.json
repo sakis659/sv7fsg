@@ -1,6 +1,143 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "items": [
+    {
+      "id": "2026-12-vu4dx",
+      "type": "dxpedition",
+      "call": "VU4DX",
+      "entity": "Νήσοι Ανταμάν (IOTA AS-001)",
+      "entity_en": "Andaman Islands (IOTA AS-001)",
+      "start": "2026-12-17",
+      "end": "2026-12-30",
+      "approx": true,
+      "bands": [
+        "HF"
+      ],
+      "modes": [],
+      "qsl": "VU2RS OQRS",
+      "summary": "Μεγάλη διεθνής DXpedition από το Port Blair των Νήσων Ανταμάν, παράλληλα με το 49ο συνέδριο SEANET (με ειδικό σήμα VU4SEA). Οι ημερομηνίες 17–30/12 δεν είναι ακόμη οριστικές, καθώς ορισμένοι κατάλογοι δίνουν και Ιανουάριο 2027· τα VU4 είναι από τις πιο ζητούμενες χώρες της Ασίας.",
+      "summary_en": "International DXpedition from Port Blair, Andaman Islands, alongside the 49th SEANET Convention. Dates are not yet final; some listings show January 2027.",
+      "sources": [
+        {
+          "name": "DX-World – VU4 DXpedition",
+          "url": "https://www.dx-world.net/vu4-dxpedition/"
+        },
+        {
+          "name": "CQ.sk",
+          "url": "https://cq.sk/en/vu4r/"
+        }
+      ],
+      "added": "2026-11-24",
+      "slug": "vu4dx-andaman-islands-2026"
+    },
+    {
+      "id": "2026-12-5h1rk",
+      "type": "dx",
+      "call": "5H1RK",
+      "entity": "Ζανζιβάρη, Τανζανία (IOTA AF-032)",
+      "entity_en": "Zanzibar, Tanzania (IOTA AF-032)",
+      "start": "2026-12-23",
+      "end": "2027-01-06",
+      "bands": [
+        "20m",
+        "15m",
+        "10m"
+      ],
+      "modes": [
+        "FT8",
+        "FT4",
+        "CW"
+      ],
+      "qsl": "SP3RK, Club Log",
+      "summary": "Ο Πολωνός SP3RK θα εκπέμπει από το Bwejuu της Ζανζιβάρης στις γιορτές, σε ύφος διακοπών με κάθετη κεραία. Κυρίως ψηφιακά στις ανώτερες μπάντες, με λίγο CW — καλή ευκαιρία για AF-032.",
+      "summary_en": "SP3RK will be on the air from Bwejuu, Zanzibar over the holidays, holiday-style with a vertical. Mostly digital on the higher bands with some CW — a good chance for AF-032.",
+      "sources": [
+        {
+          "name": "DXZone – 5H1RK",
+          "url": "https://www.dxzone.com/events/dx-operation/5h1rk-tanzania/"
+        },
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-24",
+      "slug": "5h1rk-zanzibar-tanzania-2026"
+    },
+    {
+      "id": "2026-12-arrl-10",
+      "type": "contest",
+      "call": "ARRL 10-Meter Contest",
+      "entity": "Contest",
+      "entity_en": "Contest",
+      "start": "2026-12-12",
+      "end": "2026-12-13",
+      "bands": [
+        "10m"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "",
+      "summary": "Από Σάββατο 12/12 00:00 UTC έως Κυριακή 13/12 23:59 UTC, μόνο στα 10 μέτρα. Οι σταθμοί DX δίνουν RST και αύξοντα αριθμό· με τον ήλιο ακόμη ενεργό, τα 10m μπορεί να ανοίξουν καλά προς την Αμερική.",
+      "summary_en": "From Saturday 12 Dec 0000 UTC to Sunday 13 Dec 2359 UTC, 10 metres only. DX stations send RST plus serial number; with the sun still active, 10m may open well towards the Americas.",
+      "sources": [
+        {
+          "name": "ARRL – 10 Meter Contest",
+          "url": "https://www.arrl.org/10-meter"
+        },
+        {
+          "name": "DXZone – ARRL 10-Meter 2026",
+          "url": "https://www.dxzone.com/events/contest/arrl-10-meter/2026/"
+        }
+      ],
+      "added": "2026-11-24",
+      "slug": "arrl-10-meter-contest-2026"
+    },
+    {
+      "id": "2026-11-hr5-f2jd",
+      "type": "dx",
+      "call": "HR5/F2JD",
+      "entity": "Ονδούρα",
+      "entity_en": "Honduras",
+      "start": "2026-11-23",
+      "end": "2026-11-30",
+      "bands": [],
+      "modes": [],
+      "qsl": "LoTW",
+      "summary": "Ο Γάλλος F2JD είναι ενεργός από την Ονδούρα έως το τέλος του μήνα, άρα και στο CQ WW CW. Επιβεβαίωση μέσω LoTW.",
+      "summary_en": "Frenchman F2JD is active from Honduras until the end of the month, which includes CQ WW CW. QSL via LoTW.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-24",
+      "slug": "hr5-f2jd-honduras-2026"
+    },
+    {
+      "id": "2027-01-gs5dxw",
+      "type": "special",
+      "call": "GS5DXW",
+      "entity": "Σκωτία",
+      "entity_en": "Scotland",
+      "start": "2027-01-01",
+      "end": "2027-12-31",
+      "bands": [],
+      "modes": [],
+      "qsl": "",
+      "summary": "Για τα 20 χρόνια του DX-World.net, ο Col MM0NDX θα χρησιμοποιεί όλο το 2027 το ειδικό σήμα GS5DXW. Ένα επετειακό σήμα για το site που διαβάζουν σχεδόν όλοι οι DXers.",
+      "summary_en": "To mark 20 years of DX-World.net, Col MM0NDX will use the special call GS5DXW throughout 2027. An anniversary call for the site nearly every DXer reads.",
+      "sources": [
+        {
+          "name": "DX-World – GS5DXW",
+          "url": "https://www.dx-world.net/gs5dxw-celebrating-20-years-of-dx-world-net/"
+        }
+      ],
+      "added": "2026-11-24",
+      "slug": "gs5dxw-scotland-2027"
+    },
     {
       "id": "2026-12-xj1m",
       "type": "special",
@@ -1050,8 +1187,8 @@
       "call": "XR0Z",
       "entity": "Juan Fernández (Alejandro Selkirk, IOTA SA-101)",
       "entity_en": "Juan Fernández Is. (Alejandro Selkirk, IOTA SA-101)",
-      "start": "2026-11-25",
-      "end": "2026-12-06",
+      "start": "2026-12-05",
+      "end": "2026-12-15",
       "bands": [
         "160–6m"
       ],
@@ -1061,9 +1198,13 @@
         "FT8"
       ],
       "qsl": "M0URX",
-      "summary": "Οι CE3VTZ και XQ7I ετοιμάζουν δραστηριότητα από το δυσπρόσιτο νησί Alejandro Selkirk του αρχιπελάγους Juan Fernández. Σπάνιο IOTA και ζητούμενη χώρα για την Ευρώπη, με κάλυψη και στο CQ WW CW.",
-      "summary_en": "CE3VTZ and XQ7I are heading to remote Alejandro Selkirk Island in the Juan Fernández group. A rare IOTA and a sought-after entity from Europe, with activity also during CQ WW CW.",
+      "summary": "Οι CE3VTZ και XQ7IR ετοιμάζουν δραστηριότητα από το δυσπρόσιτο νησί Alejandro Selkirk του αρχιπελάγους Juan Fernández. Λόγω συντήρησης του πλοίου η αναχώρηση μετατέθηκε για την πρώτη εβδομάδα του Δεκεμβρίου, οπότε η εκπομπή αναμένεται περίπου 5–15/12 και δεν θα προλάβει το CQ WW CW.",
+      "summary_en": "CE3VTZ and XQ7IR are heading to remote Alejandro Selkirk Island in the Juan Fernández group. Vessel maintenance has pushed departure to the first week of December, so activity is now expected around 5–15 Dec and will miss CQ WW CW.",
       "sources": [
+        {
+          "name": "DX-World – XR0Z",
+          "url": "https://www.dx-world.net/xr0z-alexander-selkirk-island-sa-101/"
+        },
         {
           "name": "NG3K – Announced DX Operations",
           "url": "https://www.ng3k.com/Misc/adxo.html"
@@ -1074,7 +1215,8 @@
         }
       ],
       "added": "2026-11-16",
-      "slug": "xr0z-juan-fernandez-is-2026"
+      "slug": "xr0z-juan-fernandez-is-2026",
+      "approx": true
     },
     {
       "id": "2026-11-5x7w",
