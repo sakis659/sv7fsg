@@ -1,6 +1,141 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-25",
   "items": [
+    {
+      "id": "2026-11-c6aag",
+      "type": "dx",
+      "call": "C6AAG",
+      "entity": "Μπαχάμες (IOTA NA-080)",
+      "entity_en": "The Bahamas (IOTA NA-080)",
+      "start": "2026-11-24",
+      "end": "2026-12-01",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "M0URX OQRS",
+      "summary": "Τρεις Καναδοί χειριστές (VA3DF, VE3RZ, VE3TW) βρίσκονται στο Great Abaco των Μπαχαμών και θα συμμετάσχουν στο CQ WW DX CW ως C6AAG. Καλή ευκαιρία για το NA-080 και για πολλαπλασιαστή στο contest.",
+      "summary_en": "Three Canadian operators (VA3DF, VE3RZ, VE3TW) are on Great Abaco in the Bahamas and will take part in CQ WW DX CW as C6AAG. A good chance for NA-080 and a contest multiplier.",
+      "sources": [
+        {
+          "name": "DX-World – C6AAG",
+          "url": "https://www.dx-world.net/c6aag-the-bahamas/"
+        }
+      ],
+      "added": "2026-11-25",
+      "slug": "c6aag-the-bahamas-2026"
+    },
+    {
+      "id": "2026-11-xu7o",
+      "type": "dx",
+      "call": "XU7O",
+      "entity": "Καμπότζη",
+      "entity_en": "Cambodia",
+      "start": "2026-11-21",
+      "end": "2026-12-31",
+      "bands": [
+        "HF incl. 60m"
+      ],
+      "modes": [
+        "FT8"
+      ],
+      "qsl": "via DL4WK",
+      "summary": "Ο DL7BO εκπέμπει σποραδικά από την Καμπότζη ως XU7O, κυρίως σε FT8 και με τα 60 μέτρα στο πρόγραμμα. Η δραστηριότητα αναμένεται να διαρκέσει περίπου τρεις μήνες, οπότε υπάρχει χρόνος για QSO.",
+      "summary_en": "DL7BO is sporadically active from Cambodia as XU7O, mainly on FT8 and including 60m. Activity is expected to last around three months, so there is time to make the QSO.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-25",
+      "slug": "xu7o-cambodia-2026"
+    },
+    {
+      "id": "2026-11-d44vv",
+      "type": "dx",
+      "call": "D44VV",
+      "entity": "Πράσινο Ακρωτήριο – νήσος Σαλ (IOTA AF-086)",
+      "entity_en": "Cape Verde – Sal Island (IOTA AF-086)",
+      "start": "2026-11-25",
+      "end": "2026-12-02",
+      "bands": [
+        "HF"
+      ],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "via LZ1JZ",
+      "summary": "Ο Ivo, LZ5VV, είναι ήδη ενεργός από τη νήσο Σαλ του Πράσινου Ακρωτηρίου ως D44VV, έως τις 2 Δεκεμβρίου. Στο CQ WW CW θα δουλέψει μόνο στα 10 μέτρα με χαμηλή ισχύ (SOSB 10m LP).",
+      "summary_en": "Ivo, LZ5VV, is already active from Sal Island, Cape Verde, as D44VV until December 2. In CQ WW CW he will run single-band 10m low power.",
+      "sources": [
+        {
+          "name": "DX-World – D44VV",
+          "url": "https://www.dx-world.net/d44vv-cape-verde/"
+        }
+      ],
+      "added": "2026-11-25",
+      "slug": "d44vv-cape-verde-sal-island-2026",
+      "approx": true
+    },
+    {
+      "id": "2026-12-c5h",
+      "type": "dx",
+      "call": "C5H",
+      "entity": "Γκάμπια",
+      "entity_en": "The Gambia",
+      "start": "2026-12-27",
+      "end": "2027-01-03",
+      "bands": [
+        "40–6m"
+      ],
+      "modes": [
+        "SSB",
+        "FT4",
+        "FT8"
+      ],
+      "qsl": "LoTW",
+      "summary": "Ο Billy, F4GJE, θα εκπέμπει από το Kotu West της Γκάμπιας ως C5H στο διάστημα των γιορτών, με 250–300 W. Η απόσταση από την Ελλάδα είναι μικρή και τα 6 μέτρα είναι επίσης στο πρόγραμμα.",
+      "summary_en": "Billy, F4GJE, will be on the air from Kotu West, The Gambia, as C5H over the holidays with 250–300 W. A short hop from Southern Europe, with 6m also on the menu.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        },
+        {
+          "name": "RAAG – C5H",
+          "url": "https://raag.org/c5h-gambia/"
+        }
+      ],
+      "added": "2026-11-25",
+      "slug": "c5h-the-gambia-2026"
+    },
+    {
+      "id": "2026-12-s79-ol1t",
+      "type": "dx",
+      "call": "S79/OL1T",
+      "entity": "Σεϋχέλλες",
+      "entity_en": "Seychelles",
+      "start": "2026-12-28",
+      "end": "2027-01-08",
+      "bands": [
+        "HF"
+      ],
+      "modes": [],
+      "qsl": "Club Log OQRS, OK6DJ (B/d)",
+      "summary": "Οι Τσέχοι OK2ZA και OK6DJ θα βρίσκονται στις Σεϋχέλλες με το σήμα S79/OL1T, γεφυρώνοντας την αλλαγή του χρόνου. Τα S7 δεν ακούγονται συχνά, άρα καλή ευκαιρία για νέα χώρα.",
+      "summary_en": "Czech operators OK2ZA and OK6DJ will be in the Seychelles signing S79/OL1T across the New Year. S7 is not on the air often, so this is a good chance for a new one.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-25",
+      "slug": "s79-ol1t-seychelles-2026"
+    },
     {
       "id": "2026-12-vu4dx",
       "type": "dxpedition",
