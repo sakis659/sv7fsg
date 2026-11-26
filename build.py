@@ -71,6 +71,8 @@ nav{border-bottom:1px solid var(--line);background:#070b14d9}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
 .logo{font-family:var(--mono);font-weight:700;letter-spacing:.08em;color:var(--text);text-decoration:none}
 nav .links a{color:var(--muted);text-decoration:none;margin-left:18px;font-size:.92rem}
+nav .links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 0}
+@media (max-width:600px){nav .links a{margin-left:12px;font-size:.85rem}nav .links a:nth-child(n+4){display:none}}
 .crumbs{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin:34px 0 14px}
 .crumbs a{color:var(--muted)}
 .type{display:inline-block;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px;
@@ -131,7 +133,7 @@ def head(title, desc, url, extra=""):
 </head>
 <body>
 <nav><div class="wrap"><a class="logo" href="/">{CALL}</a>
-<div class="links"><a href="/dx/">DX News</a><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/sv7fsg/" target="_blank" rel="noopener">Instagram</a><a href="/#about">Station</a><a href="/#contact">Contact</a></div></div></nav>
+<div class="links"><a href="/dx/">DX News</a><a href="/security/">Security</a><a href="https://www.youtube.com/@SV7FSG" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/sv7fsg/" target="_blank" rel="noopener">Instagram</a><a href="/#about">Station</a><a href="/#contact">Contact</a></div></div></nav>
 <main class="wrap">"""
 
 
@@ -209,6 +211,85 @@ def rss(items):
     return "".join(out)
 
 
+SEC_TOPICS = {"gnss": "GNSS", "sdr": "SDR", "drones": "Drones & C-UAS", "satellite": "Satellites",
+              "cellular": "Cellular / 5G", "wireless": "Wi-Fi, Bluetooth & IoT", "radio": "Radio & EW", "policy": "Policy & regulation"}
+SEC_CSS = """
+.sec-item{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:16px}
+.sec-item h2{font-size:1.15rem;margin:8px 0 8px;line-height:1.35}
+.sec-item p{color:#c3cde0}
+.sec-item details{margin-top:10px;color:var(--muted)}
+.sec-item details p{color:#aab6cc;margin-top:6px}
+.sec-item .src{margin-top:10px;font-size:.88rem;color:var(--muted)}
+.tip{border-left:3px solid var(--amber);padding:6px 0 6px 18px;margin:26px 0}
+.tip h2{font-size:1.1rem;margin-bottom:6px}
+"""
+
+
+def sec_page(d, newer, older):
+    url = f"{SITE}/security/{d['id']}/"
+    items = []
+    for it in d.get("items", []):
+        srcs = ", ".join(f'<a href="{e(s_.get("url"))}" target="_blank" rel="noopener">{e(s_.get("name"))}</a>' for s_ in it.get("sources") or [])
+        el = (f'<details lang="el"><summary>Στα ελληνικά</summary><p><b>{e(it.get("title_el"))}</b></p><p>{e(it.get("summary_el"))}</p></details>'
+              if it.get("summary_el") else "")
+        items.append(f'<article class="sec-item"><span class="type">{e(SEC_TOPICS.get(it.get("topic"), it.get("topic")))}</span>'
+                     f'<h2>{e(it.get("title_en"))}</h2><p>{e(it.get("summary_en"))}</p>{el}<p class="src">Source: {srcs}</p></article>')
+    tip = d.get("tip") or {}
+    tip_html = ""
+    if tip.get("text_en") or tip.get("text_el"):
+        tsrc = ", ".join(f'<a href="{e(s_.get("url"))}" target="_blank" rel="noopener">{e(s_.get("name"))}</a>' for s_ in tip.get("sources") or [])
+        tip_html = (f'<section class="tip"><h2>{e(tip.get("title_en") or "Practical tip")}</h2><p>{e(tip.get("text_en"))}</p>'
+                    + (f'<details lang="el"><summary>Στα ελληνικά</summary><p><b>{e(tip.get("title_el"))}</b></p><p>{e(tip.get("text_el"))}</p></details>' if tip.get("text_el") else "")
+                    + (f'<p class="src">Source: {tsrc}</p>' if tsrc else "") + "</section>")
+    nav = []
+    if older: nav.append(f'<a href="/security/{older["id"]}/">← {e(older["date"])}</a>')
+    if newer: nav.append(f'<a href="/security/{newer["id"]}/">{e(newer["date"])} →</a>')
+    ld = {"@context": "https://schema.org", "@type": "NewsArticle", "headline": d.get("title_en"), "datePublished": d.get("date"),
+          "description": d.get("intro_en"), "inLanguage": "en", "author": {"@type": "Person", "name": "Athanasios Akasidis (SV7FSG)"},
+          "mainEntityOfPage": url, "image": f"{SITE}/assets/og-dx.jpg"}
+    return (head(f"{d.get('title_en')} | {CALL}", (d.get("intro_en") or "")[:300], url,
+                 '<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + "</script><style>" + SEC_CSS + "</style>")
+            + f'<div class="crumbs"><a href="/">Home</a> / <a href="/security/">Spectrum &amp; Wireless Security</a> / {e(d.get("date"))}</div>'
+            + f'<h1 style="font-size:clamp(1.8rem,5vw,2.8rem)">{e(d.get("title_en"))}</h1><p class="sub">{e(d.get("intro_en"))}</p>'
+            + (f'<details lang="el" style="margin:-10px 0 24px;color:var(--muted)"><summary>Στα ελληνικά</summary><p>{e(d.get("intro_el"))}</p></details>' if d.get("intro_el") else "")
+            + "".join(items) + tip_html
+            + (f'<p class="note" style="display:flex;justify-content:space-between">{"".join(nav)}</p>' if nav else "")
+            + '<p class="note">Curated weekly by SV7FSG from public sources. Always check the original advisory for details.</p>'
+            + FOOT)
+
+
+def sec_index(digests):
+    url = f"{SITE}/security/"
+    if digests:
+        li = "".join(f'<li><a href="/security/{d["id"]}/">{e(d.get("title_en"))}<span>{e(d.get("date"))}</span></a></li>' for d in digests)
+        body = f'<section class="card"><ul class="more">{li}</ul></section>'
+    else:
+        body = '<section class="card"><p>The first weekly edition is coming soon.</p></section>'
+    return (head(f"Spectrum & Wireless Security: weekly briefing | {CALL}",
+                 "A weekly briefing on GNSS jamming and spoofing, SDR, drones and counter-UAS, satellites, cellular and wireless security. Curated by SV7FSG.", url)
+            + '<div class="crumbs"><a href="/">Home</a> / Spectrum &amp; Wireless Security</div>'
+            + '<h1 style="font-size:clamp(2rem,6vw,3.2rem)">Spectrum &amp; Wireless Security</h1>'
+            + '<p class="sub">A weekly briefing on GNSS jamming and spoofing, SDR, drones and counter-UAS, satellites, cellular and wireless security, written by a radio amateur with a background in electronic warfare.</p>'
+            + body + FOOT)
+
+
+def build_security():
+    p = os.path.join(ROOT, "security.json")
+    if not os.path.exists(p):
+        return []
+    data = json.load(open(p, encoding="utf-8"))
+    ds = sorted(data.get("digests", []), key=lambda d: d.get("date") or "", reverse=True)
+    sdir = os.path.join(ROOT, "security")
+    if os.path.isdir(sdir):
+        shutil.rmtree(sdir)
+    os.makedirs(sdir)
+    for i, d in enumerate(ds):
+        dd = os.path.join(sdir, d["id"]); os.makedirs(dd, exist_ok=True)
+        open(os.path.join(dd, "index.html"), "w", encoding="utf-8").write(sec_page(d, ds[i-1] if i > 0 else None, ds[i+1] if i + 1 < len(ds) else None))
+    open(os.path.join(sdir, "index.html"), "w", encoding="utf-8").write(sec_index(ds))
+    return [(f"{SITE}/security/", data.get("updated") or None)] + [(f"{SITE}/security/{d['id']}/", d.get("date")) for d in ds]
+
+
 def main():
     p = os.path.join(ROOT, "news.json")
     data = json.load(open(p, encoding="utf-8"))
@@ -244,6 +325,7 @@ def main():
 
     urls = [(f"{SITE}/", data.get("updated")), (f"{SITE}/dx/", data.get("updated"))]
     urls += [(f"{SITE}/dx/{n['slug']}/", n.get("added")) for n in items]
+    urls += build_security()
     sm = ['<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     sm += [f"<url><loc>{u}</loc>" + (f"<lastmod>{m}</lastmod>" if m else "") + "</url>" for u, m in urls]
     sm.append("</urlset>\n")

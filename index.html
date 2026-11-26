@@ -220,6 +220,7 @@
     <a href="#top" class="logo"><span class="dot"></span>SV7FSG</a>
     <div class="navlinks">
       <a href="#news" data-i18n="nav_news">DX Νέα</a>
+      <a href="/security/" data-i18n="nav_sec">Security</a>
       <a href="#about" data-i18n="nav_about">Ο σταθμός</a>
       <a href="#gear" data-i18n="nav_gear">Εξοπλισμός</a>
       <a href="#bands" data-i18n="nav_bands">Μπάντες</a>
@@ -319,6 +320,20 @@
       <div class="news" id="newsGrid"><p class="nempty">Φόρτωση…</p></div>
       <p class="legend"><a href="/dx/" data-i18n="allnews">Όλες οι ειδήσεις</a> · <a href="/feed.xml">RSS</a></p>
       <details class="archive" id="archiveBox" hidden><summary><span data-i18n="archive">Αρχείο ολοκληρωμένων</span> (<span id="archN">0</span>)</summary><div class="news" id="archiveGrid"></div></details>
+    </div>
+  </section>
+
+  <section id="security" class="reveal" hidden>
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">RF //</span><h2 data-i18n="sec_h">Spectrum &amp; Wireless Security</h2><p class="sec-sub" data-i18n="sec_sub">Εβδομαδιαία σύνοψη: παρεμβολές GNSS, SDR, drones, δορυφόροι, κινητά δίκτυα και ασύρματα.</p></div>
+      <div class="card secbox">
+        <div class="ntop"><span class="ntype" id="secDate"></span></div>
+        <h3 id="secTitle" style="font-size:1.35rem;margin:10px 0 6px"></h3>
+        <p id="secIntro" style="color:#c3cde0"></p>
+        <ul id="secList" style="margin:14px 0 0 18px;color:#c3cde0;display:grid;gap:6px"></ul>
+        <p style="margin-top:16px"><a id="secLink" class="btn btn-primary" href="/security/" data-i18n="sec_read">Διαβάστε την έκδοση</a>
+        <a class="btn btn-ghost" href="/security/" data-i18n="sec_all" style="margin-left:8px">Όλες οι εκδόσεις</a></p>
+      </div>
     </div>
   </section>
 
@@ -462,7 +477,7 @@ const CONFIG = {
 const I18N = {
   el: {
     title:"SV7FSG · Ραδιοερασιτεχνικός Σταθμός",
-    nav_news:"DX Νέα", nav_about:"Ο σταθμός", nav_gear:"Εξοπλισμός", nav_bands:"Μπάντες", nav_contact:"Επικοινωνία",
+    nav_news:"DX Νέα", nav_sec:"Security", sec_h:"Spectrum & Wireless Security", sec_sub:"Εβδομαδιαία σύνοψη: παρεμβολές GNSS, SDR, drones, δορυφόροι, κινητά δίκτυα και ασύρματα.", sec_read:"Διαβάστε την έκδοση", sec_all:"Όλες οι εκδόσεις", nav_about:"Ο σταθμός", nav_gear:"Εξοπλισμός", nav_bands:"Μπάντες", nav_contact:"Επικοινωνία",
     tag:"● Ραδιοερασιτεχνικός σταθμός · Ελλάδα", play:"Άκου το call μου σε CW", local:"Τοπική ώρα",
     news_h:"DX Νέα", news_sub:"DXpeditions, special calls, contests και ό,τι αξίζει να μπει στο log. Κάθε είδηση συνοδεύεται από την πηγή της.",
     archive:"Αρχείο ολοκληρωμένων", about_h:"Ο σταθμός", gear_h:"Εξοπλισμός", gear_sub:"Τι χρησιμοποιώ στο shack.",
@@ -482,7 +497,7 @@ const I18N = {
   },
   en: {
     title:"SV7FSG · Amateur Radio Station",
-    nav_news:"DX News", nav_about:"Station", nav_gear:"Equipment", nav_bands:"Bands", nav_contact:"Contact",
+    nav_news:"DX News", nav_sec:"Security", sec_h:"Spectrum & Wireless Security", sec_sub:"Weekly briefing: GNSS jamming and spoofing, SDR, drones, satellites, cellular and wireless security.", sec_read:"Read this week's briefing", sec_all:"All briefings", nav_about:"Station", nav_gear:"Equipment", nav_bands:"Bands", nav_contact:"Contact",
     tag:"● Amateur radio station · Greece", play:"Hear my call in CW", local:"Local time",
     news_h:"DX News", news_sub:"DXpeditions, special calls, contests and everything worth putting in the log. Every item links to its source.",
     archive:"Completed archive", about_h:"The station", gear_h:"Equipment", gear_sub:"What I use in the shack.",
@@ -545,6 +560,7 @@ function renderText(){
     ${CONFIG.instagram?`<a class="btn btn-ghost" href="${esc(CONFIG.instagram)}" target="_blank" rel="noopener">◎ Instagram</a>`:""}`;
   tick();
   renderNews();
+  if(typeof renderSec==="function") renderSec();
 }
 document.querySelectorAll(".lang button").forEach(b => b.onclick = () => {
   LANG = b.dataset.lang; try { localStorage.setItem("lang", LANG); } catch(e){}
@@ -613,6 +629,17 @@ function renderNews(){
   $("#archiveGrid").innerHTML=done.map(card).join("");
 }
 $("#nfilters").addEventListener("click",e=>{const b=e.target.closest("button"); if(b){filt=b.dataset.t;renderNews();}});
+var SEC=null;
+function renderSec(){
+  if(!SEC||!SEC.length) return;
+  const d=SEC[0]; $("#security").hidden=false;
+  $("#secDate").textContent=d.date;
+  $("#secTitle").textContent = LANG==="el" ? (d.title_el||d.title_en) : d.title_en;
+  $("#secIntro").textContent = LANG==="el" ? (d.intro_el||d.intro_en) : d.intro_en;
+  $("#secList").innerHTML=(d.items||[]).slice(0,4).map(it=>`<li>${esc(LANG==="el"?(it.title_el||it.title_en):it.title_en)}</li>`).join("");
+  $("#secLink").href=`/security/${d.id}/`;
+}
+fetch("security.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{SEC=(d.digests||[]).slice().sort((a,b)=>(b.date||"").localeCompare(a.date||""));renderSec();}).catch(()=>{});
 fetch("news.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{NEWS=d.items||[];renderNews();}).catch(()=>{NEWS_ERR=true;renderNews();});
 
 renderText();

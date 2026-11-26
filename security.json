@@ -1,0 +1,49 @@
+{
+  "updated": "2026-11-26",
+  "digests": [
+    {
+      "id": "2026-11-26",
+      "date": "2026-11-26",
+      "title_en": "GPS jamming over the North Sea, Intel Wi-Fi and Bluetooth patches",
+      "title_el": "Παρεμβολή GPS στη Βόρεια Θάλασσα, ενημερώσεις Intel για Wi-Fi και Bluetooth",
+      "intro_en": "The first edition. About 80 aircraft near Amsterdam lost GPS quality for twenty minutes, Intel fixed nine Wi-Fi and Bluetooth driver flaws in most recent laptops, and EASA's list shows where interference is reported around Greece.",
+      "intro_el": "Η πρώτη έκδοση. Περίπου 80 αεροσκάφη κοντά στο Άμστερνταμ είχαν υποβαθμισμένο GPS για είκοσι λεπτά, η Intel διόρθωσε εννέα ευπάθειες στους οδηγούς Wi-Fi και Bluetooth των περισσότερων πρόσφατων laptop, και η λίστα της EASA δείχνει πού αναφέρονται παρεμβολές γύρω από την Ελλάδα.",
+      "items": [
+        {
+          "topic": "gnss",
+          "title_en": "Suspected GPS jamming hits approaches to Schiphol",
+          "summary_en": "On 9 November, seven aircraft approaching Amsterdam Schiphol reported problems with their RNP navigation, and ADS-B analysis suggests around 80 aircraft saw degraded GPS for about 20 minutes. Analyst John Wiseman placed a possible source near sea level in the North Sea, north of Texel. Dutch air traffic control considers deliberate jamming plausible. All aircraft landed safely.",
+          "title_el": "Πιθανή παρεμβολή GPS στις προσεγγίσεις του Schiphol",
+          "summary_el": "Στις 9 Νοεμβρίου, επτά αεροσκάφη σε προσέγγιση για το Schiphol ανέφεραν προβλήματα στην πλοήγηση RNP. Η ανάλυση δεδομένων ADS-B δείχνει ότι περίπου 80 αεροσκάφη είχαν υποβαθμισμένο GPS για περίπου 20 λεπτά, με πιθανή πηγή κοντά στην επιφάνεια της θάλασσας, βόρεια του Texel. Όλα προσγειώθηκαν με ασφάλεια.",
+          "sources": [{"name": "GPS World", "url": "https://www.gpsworld.com/?p=116968"}]
+        },
+        {
+          "topic": "wireless",
+          "title_en": "Intel fixes nine flaws in its Wi-Fi and Bluetooth drivers",
+          "summary_en": "Advisory INTEL-SA-01530 (10 November) covers nine CVEs in Intel PROSet/Wireless Wi-Fi and Intel Wireless Bluetooth for Windows, mostly denial of service, with one heap overflow in the Wi-Fi kernel driver rated 8.5 (CVE-2026-40433, adjacent network, no user interaction). Affected: Wireless-AC 9260/9560, Wi-Fi 6/6E AX201/AX210/AX211, Wi-Fi 7 BE200/BE201, Killer cards, and the integrated wireless of 10th to 14th gen Core and Core Ultra. Fix: version 24.50 or later.",
+          "title_el": "Η Intel διορθώνει εννέα ευπάθειες στους οδηγούς Wi-Fi και Bluetooth",
+          "summary_el": "Αν το laptop σας έχει κάρτα Intel (σχεδόν όλα τα πρόσφατα), ενημερώστε τους οδηγούς Wi-Fi και Bluetooth στην έκδοση 24.50 ή νεότερη, μέσω Windows Update ή του Intel Driver & Support Assistant. Η σοβαρότερη ευπάθεια (βαθμός 8.5) μπορεί να ενεργοποιηθεί από κάποιον που βρίσκεται στο ίδιο δίκτυο, π.χ. σε δημόσιο Wi-Fi.",
+          "sources": [{"name": "Intel Security Center", "url": "https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01530.html"}]
+        },
+        {
+          "topic": "policy",
+          "title_en": "Where EASA sees GNSS interference around Greece",
+          "summary_en": "EASA's Safety Information Bulletin 2022-02R4 (3 July 2026) keeps a running list of the most affected flight information regions from ADS-B data and pilot reports. In its October update, Greece's neighbours feature prominently: Nicosia, Istanbul and Ankara, Sofia and Bucharest. Crews flying in the eastern Mediterranean should expect time shifts, spurious terrain warnings and drifting hybrid positions.",
+          "title_el": "Πού καταγράφει η EASA παρεμβολές GNSS γύρω από την Ελλάδα",
+          "summary_el": "Η EASA ενημερώνει τακτικά λίστα με τις περιοχές πληροφοριών πτήσεων που επηρεάζονται περισσότερο. Στη λίστα του Οκτωβρίου εμφανίζονται οι γείτονές μας: Λευκωσία, Κωνσταντινούπολη, Άγκυρα, Σόφια, Βουκουρέστι. Για τη Θράκη, η Σόφια και η Κωνσταντινούπολη είναι οι πιο κοντινές.",
+          "sources": [{"name": "EASA", "url": "https://www.easa.europa.eu/en/domains/air-operations/global-navigation-satellite-system-outages-and-alterations"}]
+        }
+      ],
+      "tip": {
+        "title_en": "Practical tip: check whether your receiver speaks OSNMA",
+        "text_en": "Galileo's Open Service Navigation Message Authentication has been operational since July 2025. It adds a digital signature to the navigation message so a receiver can tell real Galileo data from a spoofed copy, free of charge. More than 20 receiver models already support it, and for many the upgrade is firmware only. If you depend on GNSS for timing (a GPSDO for your station, for example), it is worth asking your vendor. OSNMA does not help against plain jamming.",
+        "title_el": "Πρακτική συμβουλή: υποστηρίζει ο δέκτης σας OSNMA;",
+        "text_el": "Η υπηρεσία OSNMA του Galileo λειτουργεί από τον Ιούλιο του 2025 και επιτρέπει στον δέκτη να ελέγχει ότι τα δεδομένα πλοήγησης είναι γνήσια και όχι πλαστά (spoofing), δωρεάν. Πάνω από 20 μοντέλα δεκτών την υποστηρίζουν, συχνά με απλή αναβάθμιση firmware. Δεν προστατεύει από την απλή παρεμβολή (jamming).",
+        "sources": [
+          {"name": "European GNSS Service Centre", "url": "https://www.gsc-europa.eu/node/7832"},
+          {"name": "ESA", "url": "https://www.esa.int/Applications/Satellite_navigation/Galileo_vs._spoofing_ESA_tests_in_real-world_environments"}
+        ]
+      }
+    }
+  ]
+}
