@@ -1,6 +1,136 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "items": [
+    {
+      "id": "2026-12-dg125wh",
+      "type": "special",
+      "call": "DG125WH",
+      "entity": "Γερμανία",
+      "entity_en": "Germany",
+      "start": "2026-12-01",
+      "end": "2026-12-31",
+      "bands": [],
+      "modes": [],
+      "qsl": "Club Log OQRS, LoTW, DCL, DK5ON",
+      "summary": "Ο γερμανικός σύλλογος DARC τιμά τα 125 χρόνια από τη γέννηση του φυσικού Βέρνερ Χάιζενμπεργκ με το ειδικό διακριτικό DG125WH, σε όλη τη διάρκεια του Δεκεμβρίου. Εύκολο QSO από την Ελλάδα για συλλέκτες ειδικών σταθμών, με επιβεβαίωση και ηλεκτρονικά.",
+      "summary_en": "Germany's DARC marks the 125th birth anniversary of physicist Werner Heisenberg with the special call DG125WH throughout December. An easy contact from Europe for special-event collectors, with electronic confirmation available.",
+      "sources": [
+        {
+          "name": "425 DX News #1855",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855"
+        },
+        {
+          "name": "425 DX News #1855 – Calendar",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855-calendar"
+        }
+      ],
+      "added": "2026-11-26",
+      "slug": "dg125wh-germany-2026"
+    },
+    {
+      "id": "2026-12-tc3dis",
+      "type": "special",
+      "call": "TC3DIS",
+      "entity": "Τουρκία",
+      "entity_en": "Türkiye",
+      "start": "2026-12-03",
+      "end": "2026-12-03",
+      "bands": [
+        "40m",
+        "30m",
+        "20m",
+        "15m",
+        "10m"
+      ],
+      "modes": [
+        "CW beacon",
+        "FT8",
+        "JS8Call"
+      ],
+      "qsl": "",
+      "summary": "Στις 3 Δεκεμβρίου, Παγκόσμια Ημέρα Ατόμων με Αναπηρία, ο τουρκικός σύλλογος TRAC βγαίνει στον αέρα ως TC3DIS στο πλαίσιο του «Silent Power Project». Θα λειτουργεί beacon σε CW και θα κάνει QSO σε FT8 και JS8Call στα 40, 30, 20, 15 και 10 μέτρα· λεπτομέρειες στο QRZ.com.",
+      "summary_en": "On 3 December, the International Day of Persons with Disabilities, Turkey's TRAC goes on the air as TC3DIS under its \"Silent Power Project\". Expect a CW beacon plus FT8 and JS8Call contacts on 40, 30, 20, 15 and 10 m; details on QRZ.com.",
+      "sources": [
+        {
+          "name": "The ARRL Letter, 12/11/2026",
+          "url": "https://www.arrl.org/arrlletterissue?issue=2026-11-12"
+        },
+        {
+          "name": "QRZ.com – TC3DIS",
+          "url": "https://www.qrz.com/db/TC3DIS"
+        }
+      ],
+      "added": "2026-11-26",
+      "slug": "tc3dis-turkiye-2026"
+    },
+    {
+      "id": "2026-11-dp1pol",
+      "type": "dx",
+      "call": "DP1POL",
+      "entity": "Σταθμός Neumayer III, Ανταρκτική (IOTA AN-016)",
+      "entity_en": "Neumayer Station III, Antarctica (IOTA AN-016)",
+      "start": "2026-11-01",
+      "end": "2027-01-31",
+      "approx": true,
+      "bands": [],
+      "modes": [],
+      "qsl": "",
+      "summary": "Ο γερμανικός ερευνητικός σταθμός Neumayer III στην Ανταρκτική είναι ενεργός ως DP1POL τον Νοέμβριο, τον Δεκέμβριο και τον Ιανουάριο. Οι ημερομηνίες είναι κατά προσέγγιση και η δραστηριότητα εξαρτάται από τον ελεύθερο χρόνο του προσωπικού, οπότε αξίζει να παρακολουθείτε το DX cluster.",
+      "summary_en": "Germany's Neumayer III research station in Antarctica is active as DP1POL during November, December and January. Dates are approximate and activity depends on the staff's free time, so keep an eye on the DX cluster.",
+      "sources": [
+        {
+          "name": "425 DX News #1855 – Calendar",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855-calendar"
+        }
+      ],
+      "added": "2026-11-26",
+      "slug": "dp1pol-neumayer-station-iii-antarctica-2026"
+    },
+    {
+      "id": "2026-11-fs-dl1mgb",
+      "type": "dx",
+      "call": "FS/DL1MGB",
+      "entity": "Άγιος Μαρτίνος (IOTA NA-105)",
+      "entity_en": "Saint Martin (IOTA NA-105)",
+      "start": "2026-11-30",
+      "end": "2026-12-09",
+      "bands": [],
+      "modes": [],
+      "qsl": "",
+      "summary": "Ο Γερμανός DL1MGB θα εκπέμπει από το γαλλικό τμήμα του νησιού Άγιος Μαρτίνος στην Καραϊβική, από 30 Νοεμβρίου έως 9 Δεκεμβρίου. Μια ακόμη ευκαιρία για το FS, μετά το CQ WW CW.",
+      "summary_en": "German operator DL1MGB will be active from the French side of Saint Martin in the Caribbean, 30 November to 9 December. Another chance for FS after CQ WW CW.",
+      "sources": [
+        {
+          "name": "425 DX News #1855 – Calendar",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855-calendar"
+        }
+      ],
+      "added": "2026-11-26",
+      "slug": "fs-dl1mgb-saint-martin-2026"
+    },
+    {
+      "id": "2026-11-vy0erc",
+      "type": "dx",
+      "call": "VY0ERC",
+      "entity": "Νήσος Έλσμιρ, Καναδάς (IOTA NA-008)",
+      "entity_en": "Ellesmere Island, Canada (IOTA NA-008)",
+      "start": "",
+      "end": "2026-12-10",
+      "approx": true,
+      "bands": [],
+      "modes": [],
+      "qsl": "",
+      "summary": "Το VY0ERC εμφανίζεται ενεργό από το νησί Έλσμιρ (IOTA NA-008) στον αρκτικό Καναδά έως τις 10 Δεκεμβρίου. Το Nunavut (VY0) δεν ακούγεται συχνά από την Ελλάδα, οπότε αξίζει να ακούτε όταν ανοίγουν οι ψηλές μπάντες προς τη Βόρεια Αμερική.",
+      "summary_en": "VY0ERC is listed as active from Ellesmere Island (IOTA NA-008) in Arctic Canada until 10 December. Nunavut (VY0) is not often heard from Southern Europe, so listen when the high bands open to North America.",
+      "sources": [
+        {
+          "name": "425 DX News #1855 – Calendar",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855-calendar"
+        }
+      ],
+      "added": "2026-11-26",
+      "slug": "vy0erc-ellesmere-island-canada-2026"
+    },
     {
       "id": "2026-11-c6aag",
       "type": "dx",
@@ -236,16 +366,20 @@
       "entity": "Ονδούρα",
       "entity_en": "Honduras",
       "start": "2026-11-23",
-      "end": "2026-11-30",
+      "end": "2027-03-15",
       "bands": [],
       "modes": [],
       "qsl": "LoTW",
-      "summary": "Ο Γάλλος F2JD είναι ενεργός από την Ονδούρα έως το τέλος του μήνα, άρα και στο CQ WW CW. Επιβεβαίωση μέσω LoTW.",
-      "summary_en": "Frenchman F2JD is active from Honduras until the end of the month, which includes CQ WW CW. QSL via LoTW.",
+      "summary": "Ο Γάλλος F2JD είναι ενεργός από την Ονδούρα για μεγάλο διάστημα, σύμφωνα με το ημερολόγιο του 425 DX News έως τα μέσα Μαρτίου 2027, καλύπτοντας και το CQ WW CW. Επιβεβαίωση μέσω LoTW.",
+      "summary_en": "Frenchman F2JD is active from Honduras for an extended stay, until mid-March 2027 according to the 425 DX News calendar, including CQ WW CW. QSL via LoTW.",
       "sources": [
         {
           "name": "NG3K – Announced DX Operations",
           "url": "https://www.ng3k.com/misc/adxo.html"
+        },
+        {
+          "name": "425 DX News #1855 – Calendar",
+          "url": "https://swarl.org/news/2026-11-21/425-dx-news-1855-calendar"
         }
       ],
       "added": "2026-11-24",
