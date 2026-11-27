@@ -1,6 +1,141 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "items": [
+    {
+      "id": "2026-12-xm9m",
+      "type": "special",
+      "call": "XM9M",
+      "entity": "Καναδάς – Νέα Γη (St. John's)",
+      "entity_en": "Canada – Newfoundland (St. John's)",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "approx": true,
+      "bands": [],
+      "modes": [],
+      "qsl": "See QRZ.com (XM9M)",
+      "summary": "Ο ειδικός σταθμός XM9M από το St. John's της Νέας Γης τιμά τα 125 χρόνια από την πρώτη υπερατλαντική λήψη του Marconi, στις 12 Δεκεμβρίου 1901. Η κύρια δραστηριότητα αναμένεται γύρω στις 12 Δεκεμβρίου· η ακριβής διάρκεια, οι μπάντες και η QSL θα ανακοινωθούν στο QRZ.",
+      "summary_en": "Special event station XM9M from St. John's, Newfoundland, marks 125 years since Marconi's first transatlantic reception on 12 December 1901. The main activity is expected around 12 December; exact duration, bands and QSL details are to be posted on QRZ.",
+      "sources": [
+        {
+          "name": "DX-World",
+          "url": "https://www.dx-world.net/xm9m-125th-anniversary-of-marconis-first-transatlantic-radio-communication/"
+        },
+        {
+          "name": "QRZ.com – XM9M",
+          "url": "https://www.qrz.com/db/XM9M"
+        }
+      ],
+      "added": "2026-11-27",
+      "slug": "xm9m-canada-newfoundland-2026"
+    },
+    {
+      "id": "2026-11-ariss-warszawa",
+      "type": "satellite",
+      "call": "ISS – ARISS (SP5KAB)",
+      "entity": "ISS – Centrum Promocji Kultury, Βαρσοβία",
+      "entity_en": "ISS – Centrum Promocji Kultury, Warsaw",
+      "start": "2026-11-30",
+      "end": "2026-11-30",
+      "bands": [
+        "145.800 MHz"
+      ],
+      "modes": [
+        "FM"
+      ],
+      "qsl": "",
+      "summary": "Τη Δευτέρα 30 Νοεμβρίου στις 13:39 UTC το Centrum Promocji Kultury της Βαρσοβίας θα επικοινωνήσει απευθείας, μέσω του σταθμού SP5KAB, με τον αστροναύτη Luke Delaney στο ISS. Το πέρασμα είναι ψηλό πάνω από την Πολωνία, οπότε από την Ελλάδα αξίζει να δοκιμάσετε λήψη του downlink (συνήθως 145.800 MHz FM). Θα υπάρχει και ζωντανή μετάδοση στο YouTube.",
+      "summary_en": "On Monday 30 November at 13:39 UTC, Centrum Promocji Kultury in Warsaw will make a direct contact via SP5KAB with astronaut Luke Delaney aboard the ISS. The pass is high over Poland, so listeners in Greece may be able to copy the downlink (usually 145.800 MHz FM). A YouTube livestream is also planned.",
+      "sources": [
+        {
+          "name": "ARISS – Upcoming Educational Contacts",
+          "url": "https://www.ariss.org/upcoming-educational-contacts.html"
+        }
+      ],
+      "added": "2026-11-27",
+      "slug": "iss-ariss-sp5kab-iss-centrum-promocji-kultury-warsaw-2026"
+    },
+    {
+      "id": "2026-12-kh0-aj6vj",
+      "type": "dx",
+      "call": "KH0/AJ6VJ",
+      "entity": "Νήσοι Μαριάνες (Saipan)",
+      "entity_en": "Mariana Islands (Saipan)",
+      "start": "2026-12-29",
+      "end": "2027-01-03",
+      "bands": [
+        "40–10m"
+      ],
+      "modes": [
+        "CW",
+        "FT8"
+      ],
+      "qsl": "LoTW, Club Log OQRS",
+      "summary": "Ο AJ6VJ θα είναι QRV ως KH0/AJ6VJ από το Saipan των Βορείων Μαριανών, από 29 Δεκεμβρίου έως 3 Ιανουαρίου, στα 40–10 μέτρα (ίσως και 80) με CW και FT8. Για σταθμό στην Ελλάδα είναι δύσκολη διαδρομή, οπότε δοκιμάστε τα ψηλά HF το πρωί.",
+      "summary_en": "AJ6VJ will be QRV as KH0/AJ6VJ from Saipan in the Northern Mariana Islands, 29 December to 3 January, on 40–10m (maybe 80m) using CW and FT8. It is a tough path from Europe, so try the higher HF bands in the morning.",
+      "sources": [
+        {
+          "name": "NG3K – Announced DX Operations",
+          "url": "https://www.ng3k.com/misc/adxo.html"
+        }
+      ],
+      "added": "2026-11-27",
+      "slug": "kh0-aj6vj-mariana-islands-2026"
+    },
+    {
+      "id": "2026-11-7q2tb",
+      "type": "dx",
+      "call": "7Q2TB",
+      "entity": "Μαλάουι",
+      "entity_en": "Malawi",
+      "start": "2026-11-25",
+      "end": "",
+      "bands": [
+        "15m",
+        "10m"
+      ],
+      "modes": [
+        "SSB",
+        "FT8"
+      ],
+      "qsl": "",
+      "summary": "Η 18χρονη φοιτήτρια Thocco Banda είναι QRV από το Μαλάουι ως 7Q2TB από τις 25 Νοεμβρίου, στα 15 και 10 μέτρα με SSB και FT8, και μαθαίνει CW. Μια νέα φωνή από την Αφρική που αξίζει ένα προσεκτικό, υπομονετικό QSO.",
+      "summary_en": "Thocco Banda, an 18-year-old student, has been QRV from Malawi as 7Q2TB since 25 November on 15 and 10m SSB and FT8, and is learning CW. A new young voice from Africa that deserves a patient, courteous QSO.",
+      "sources": [
+        {
+          "name": "DX-World",
+          "url": "https://www.dx-world.net/7q2tb-malawi/"
+        }
+      ],
+      "added": "2026-11-27",
+      "slug": "7q2tb-malawi-2026"
+    },
+    {
+      "id": "2026-11-vp8tab",
+      "type": "dx",
+      "call": "VP8TAB",
+      "entity": "Νήσοι Φόκλαντ",
+      "entity_en": "Falkland Islands",
+      "start": "2026-11-26",
+      "end": "2027-01-06",
+      "approx": true,
+      "bands": [
+        "40m"
+      ],
+      "modes": [
+        "FT8"
+      ],
+      "qsl": "",
+      "summary": "Ο Dylan, MM7DST, βρίσκεται στη βάση Mount Pleasant στα Φόκλαντ και εκπέμπει ως VP8TAB, μέχρι στιγμής κυρίως στα 40 μέτρα FT8. Θα μείνει ως τις 6 Ιανουαρίου, οπότε μαζί με τον VP8TAA υπάρχουν δύο ευκαιρίες για τα Φόκλαντ αυτόν τον χειμώνα.",
+      "summary_en": "Dylan, MM7DST, is stationed at Mount Pleasant in the Falklands and is active as VP8TAB, so far mostly on 40m FT8. He stays until 6 January, so together with VP8TAA there are two chances for the Falklands this winter.",
+      "sources": [
+        {
+          "name": "DX-World",
+          "url": "https://www.dx-world.net/vp8tab-falkland-islands/"
+        }
+      ],
+      "added": "2026-11-27",
+      "slug": "vp8tab-falkland-islands-2026"
+    },
     {
       "id": "2026-12-dg125wh",
       "type": "special",
@@ -743,7 +878,7 @@
       "call": "ZC4MK",
       "entity": "Βρετανικές Βάσεις Κύπρου (SBA)",
       "start": "2026-11-23",
-      "end": "2026-12-01",
+      "end": "2026-11-30",
       "approx": true,
       "bands": [
         "HF"
@@ -753,8 +888,8 @@
       ],
       "qsl": "Via G0KOM",
       "entity_en": "UK Sovereign Base Areas on Cyprus",
-      "summary": "Ο Adrian, G0KOM, επιστρέφει στις Βρετανικές Βάσεις της Κύπρου ως ZC4MK από 23 Νοεμβρίου έως 1 Δεκεμβρίου, με συμμετοχή στο CQ WW DX CW. Από την Ελλάδα είναι εύκολο QSO ακόμη και με μικρό σταθμό. QSL μέσω G0KOM.",
-      "summary_en": "Adrian, G0KOM, returns to the UK Sovereign Base Areas on Cyprus as ZC4MK from 23 November to 1 December, including an entry in CQ WW DX CW. From Greece it should be an easy QSO even with a modest station. QSL via G0KOM.",
+      "summary": "Ο Adrian, G0KOM, είναι QRV από τις Βρετανικές Βάσεις της Κύπρου ως ZC4MK. Η έναρξη καθυστέρησε λόγω προβλήματος με τη γεννήτρια και η δραστηριότητα αναμένεται ως τις 30 Νοεμβρίου, με συμμετοχή στο CQ WW DX CW. Από την Ελλάδα είναι εύκολο QSO ακόμη και με μικρό σταθμό. QSL μέσω G0KOM.",
+      "summary_en": "Adrian, G0KOM, is QRV from the UK Sovereign Base Areas on Cyprus as ZC4MK. The start was delayed by generator trouble and activity is expected until around 30 November, including an entry in CQ WW DX CW. From Greece it should be an easy QSO even with a modest station. QSL via G0KOM.",
       "sources": [
         {
           "name": "DX-World",
