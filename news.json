@@ -1,6 +1,79 @@
 {
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "items": [
+    {
+      "id": "2026-11-hb0dx",
+      "type": "dx",
+      "call": "HB0DX",
+      "entity": "Λιχτενστάιν",
+      "entity_en": "Liechtenstein",
+      "start": "2026-11-28",
+      "end": "2026-11-29",
+      "bands": [],
+      "modes": [
+        "CW"
+      ],
+      "qsl": "LoTW",
+      "summary": "Μια ομάδα από Γερμανούς και Σλοβένους χειριστές (DD1MAT, DK6WL, DL2JRM, S50X, S53Z, S57WX) τρέχει το CQ WW DX CW από το Λιχτενστάιν ως HB0DX. Πριν από το contest ακούστηκαν και ως HB0/homecall. Για σταθμό στην Ελλάδα είναι εύκολος πολλαπλασιαστής και καλή ευκαιρία για νέα μπάντα με HB0.",
+      "summary_en": "A German and Slovenian team (DD1MAT, DK6WL, DL2JRM, S50X, S53Z, S57WX) is running CQ WW DX CW from Liechtenstein as HB0DX, after some pre-contest activity as HB0/homecall. From Greece it is an easy multiplier and a good chance for a new band slot with HB0.",
+      "sources": [
+        {
+          "name": "DX-World – HB0DX",
+          "url": "https://www.dx-world.net/hb0dx-liechtenstein/"
+        }
+      ],
+      "added": "2026-11-28",
+      "slug": "hb0dx-liechtenstein-2026"
+    },
+    {
+      "id": "2026-11-7q7ec",
+      "type": "dx",
+      "call": "7Q7EC",
+      "entity": "Μαλάουι",
+      "entity_en": "Malawi",
+      "start": "2026-11-26",
+      "end": "",
+      "bands": [
+        "15m",
+        "10m"
+      ],
+      "modes": [
+        "SSB"
+      ],
+      "qsl": "",
+      "summary": "Ο Emmanuel Chunga είναι QRV από το Μαλάουι ως 7Q7EC από τις 26 Νοεμβρίου, στα 15 και 10 μέτρα SSB. Μαζί με τον 7Q2TB, είναι δεύτερη νέα φωνή από το Μαλάουι αυτές τις μέρες, με καλή διαδρομή προς την Ελλάδα όταν ανοίγουν τα ψηλά HF το μεσημέρι.",
+      "summary_en": "Emmanuel Chunga has been QRV from Malawi as 7Q7EC since 26 November on 15 and 10m SSB. Together with 7Q2TB, it is the second new voice from Malawi these days, with a good path to Southern Europe when the high bands open around midday.",
+      "sources": [
+        {
+          "name": "DX-World – 7Q7EC",
+          "url": "https://www.dx-world.net/7q7ec-malawi/"
+        }
+      ],
+      "added": "2026-11-28",
+      "slug": "7q7ec-malawi-2026"
+    },
+    {
+      "id": "2026-11-d44mm",
+      "type": "dx",
+      "call": "D44MM",
+      "entity": "Πράσινο Ακρωτήριο – νήσος Σαλ (IOTA AF-086)",
+      "entity_en": "Cape Verde – Sal Island (IOTA AF-086)",
+      "start": "",
+      "end": "2026-12-01",
+      "bands": [],
+      "modes": [],
+      "qsl": "LoTW",
+      "summary": "Ο Φινλανδός Pasi, OH1MM, εκπέμπει από τη νήσο Σαλ ως D44MM έως την 1η Δεκεμβρίου, με φορητό σταθμό 10 W και σύρματα. Σχεδιάζει δραστηριοποιήσεις WWFF, POTA και SOTA και ίσως συμμετοχή στο CQ WW CW. Με τόσο χαμηλή ισχύ χρειάζεται καλό αυτί και ήσυχη μπάντα.",
+      "summary_en": "Finnish operator Pasi, OH1MM, is on the air from Sal Island as D44MM until 1 December, running a portable 10 W station with wire antennas. He plans WWFF, POTA and SOTA activations and may join CQ WW CW. With such low power, expect to listen carefully.",
+      "sources": [
+        {
+          "name": "DX-World – D44MM",
+          "url": "https://www.dx-world.net/d44mm-cape-verde/"
+        }
+      ],
+      "added": "2026-11-28",
+      "slug": "d44mm-cape-verde-sal-island-2026"
+    },
     {
       "id": "2026-12-xm9m",
       "type": "special",
@@ -654,18 +727,26 @@
       "call": "SV Licence Exams",
       "entity": "Ελλάδα",
       "entity_en": "Greece",
-      "start": "2026-12-14",
-      "end": "2026-12-16",
+      "start": "2026-12-11",
+      "end": "2026-12-18",
       "approx": true,
       "bands": [],
       "modes": [],
       "qsl": "",
-      "summary": "Οι Περιφερειακές Ενότητες ανακοινώνουν τις εξετάσεις για πτυχίο ραδιοερασιτέχνη Κατηγορίας 1 και Εισαγωγικού επιπέδου (Β΄ περίοδος 2026). Στην Καστοριά, για παράδειγμα, οι εξετάσεις γίνονται στις 14 και 16 Δεκεμβρίου και οι αιτήσεις υποβάλλονται ηλεκτρονικά στο radioerasitexnes.gov.gr ως τις 4 Δεκεμβρίου. Οι ημερομηνίες διαφέρουν ανά περιοχή, γι' αυτό ελέγξτε την ανακοίνωση της δικής σας Περιφέρειας.",
-      "summary_en": "Greek regional authorities are announcing the second 2026 exam session for the Class 1 and Entry-level amateur radio licences. In Kastoria, for example, exams take place on 14 and 16 December, with online applications at radioerasitexnes.gov.gr until 4 December. Dates vary by region, so check your own regional announcement.",
+      "summary": "Οι Περιφερειακές Ενότητες ανακοινώνουν τις εξετάσεις για πτυχίο ραδιοερασιτέχνη Κατηγορίας 1 και Εισαγωγικού επιπέδου (Β΄ περίοδος 2026). Στα Τρίκαλα γίνονται στις 11 Δεκεμβρίου, στην Καστοριά στις 14 και 16 Δεκεμβρίου (αιτήσεις έως 4/12) και στο Ηράκλειο στις 18 Δεκεμβρίου (αιτήσεις έως 11/12). Οι αιτήσεις υποβάλλονται ηλεκτρονικά στο radioerasitexnes.gov.gr. Ελέγξτε την ανακοίνωση της δικής σας Περιφέρειας.",
+      "summary_en": "Greek regional authorities are announcing the second 2026 exam session for the Class 1 and Entry-level amateur radio licences. Trikala holds exams on 11 December, Kastoria on 14 and 16 December (applications by 4 Dec) and Heraklion on 18 December (applications by 11 Dec). Applications are filed online at radioerasitexnes.gov.gr; check your own regional announcement.",
       "sources": [
         {
           "name": "Π.Ε. Καστοριάς",
           "url": "https://kastoria.pdm.gov.gr/prokiryxi-exetaseon-gia-tin-apoktisi-ptychiou-radioerasitechni-katigorias-1-kai-eisagogikou-epipedou-v-periodou-2026/"
+        },
+        {
+          "name": "Kalimera Ellada – Ηράκλειο",
+          "url": "https://www.kalimera-ellada.gr/irakleio-exetaseis-radioerasitexnon-18-dekemvriou-2026/"
+        },
+        {
+          "name": "Meteora News – Τρίκαλα",
+          "url": "https://www.meteoranews.gr/2026/11/anakoinosi-eksetaseon-radioerasitechnon-periodou-2026-stin-trikalon/"
         }
       ],
       "added": "2026-11-23",
@@ -1327,20 +1408,24 @@
       "call": "J38W",
       "entity": "Γρενάδα",
       "entity_en": "Grenada",
-      "start": "2026-11-22",
+      "start": "2026-11-23",
       "end": "2026-12-02",
       "bands": [
-        "160–10m"
+        "HF"
       ],
       "modes": [
         "CW",
         "SSB",
         "Digital"
       ],
-      "qsl": "",
-      "summary": "Το J38W θα είναι QRV από τη Γρενάδα στην Καραϊβική, με CW, SSB και ψηφιακά από 160 έως 10m, και πιθανώς στο CQ WW DX CW. Η διαδρομή QSL δεν έχει ανακοινωθεί ακόμη.",
-      "summary_en": "J38W will be active from Grenada in the Caribbean on CW, SSB and digital modes, 160–10m, likely including CQ WW DX CW. The QSL route has not been announced yet.",
+      "qsl": "J38W via M0OXO",
+      "summary": "Εξαμελής βρετανοαμερικανική ομάδα είναι QRV από τη Γρενάδα από τις 23 Νοεμβρίου έως τις 2 Δεκεμβρίου, σε όλο το HF με CW, SSB και ψηφιακά. Το κύριο διακριτικό J38W τρέχει το CQ WW DX CW σε Multi-Two, ενώ ακούγονται και τα ατομικά J38KP, J38NK, J38PVM, J38PH και J38WD. Η QSL του J38W γίνεται μέσω M0OXO.",
+      "summary_en": "A six-strong UK/US team is QRV from Grenada from 23 November to 2 December, across HF on CW, SSB and digital modes. The main call J38W runs CQ WW DX CW as Multi-Two, and the individual calls J38KP, J38NK, J38PVM, J38PH and J38WD are also on. QSL for J38W via M0OXO.",
       "sources": [
+        {
+          "name": "DX-World – J3 Grenada DXpedition",
+          "url": "https://www.dx-world.net/j3-grenada-dxpedition/"
+        },
         {
           "name": "DXZone – J38W",
           "url": "https://www.dxzone.com/events/dx-operation/j38w-grenada/"
